@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MXD Sales Academy</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow-x: hidden;
+    }
+    canvas#particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    .container {
+      padding: 80px 20px;
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.6;
+    }
+    .logo {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .logo img {
+      width: 160px;
+      height: auto;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+    h2 {
+      margin-top: 60px;
+      font-size: 1.8em;
+    }
+    p {
+      font-size: 1.1em;
+    }
+    ul {
+      font-size: 1.05em;
+    }
+    .button {
+      display: inline-block;
+      background-color: #fff;
+      color: #000;
+      padding: 15px 30px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 30px;
+      transition: background 0.3s ease;
+    }
+    .button:hover {
+      background-color: #ccc;
+    }
+    .spacer {
+      height: 150px;
+    }
+    .disclaimer {
+      font-size: 0.85em;
+      color: #aaa;
+      margin-top: 80px;
+      padding-top: 40px;
+      border-top: 1px solid #333;
+    }
+    .contact {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 0.95em;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="particles-js"></canvas>
+
+  <div class="container">
+    <div class="logo">
+      <img src="mxd_logo_white.png" alt="MXD Logo" />
+    </div>
+
+    <h1>Break into Remote High-Ticket Sales</h1>
+    <p>
+      Learn how to earn up to <strong>$5,000/month remotely</strong> while aligning with your goals, developing discipline, and gaining true <strong>time and location freedom</strong>.
+    </p>
+    <p>
+      No corporate leash. No fluff. Just real closers and real results.
+    </p>
+
+    <a class="button" href="https://whop.com/checkout/plan_FfCu0luQBYnz0?d2c=true">Join Now</a>
+
+    <h2>What You'll Learn</h2>
+    <ul>
+      <li>Mindset of top 1% earners</li>
+      <li>Our proven DM script to close $1K+ sales</li>
+      <li>Confidence, self-mastery & clarity</li>
+      <li>Remote lifestyle strategies</li>
+      <li>Access to the MXD private community</li>
+      <li>Real mentorship & opportunity placement</li>
+    </ul>
+
+    <h2>What MXD Stands For</h2>
+    <p><strong>MXD = Mindset x Discipline</strong></p>
+    <p>
+      We’re not just training salespeople.  
+      We’re building <strong>leaders</strong> who take full ownership of their life.  
+      Diversity, authenticity, growth, and real community — that’s what we stand for.
+    </p>
+
+    <div class="spacer"></div>
+
+    <div class="disclaimer">
+      <p><strong>Disclaimer:</strong> This program is for educational purposes only. We do not guarantee any income, sales, or business results. Your success depends on your individual effort, consistency, and market conditions. This is not legal, tax, or financial advice.</p>
+    </div>
+
+    <div class="contact">
+      Contact us: <a href="mailto:contact@mxdenterprises.com">contact@mxdenterprises.com</a>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+  <script>
+    tsParticles.load("particles-js", {
+      fullScreen: { enable: false },
+      particles: {
+        number: { value: 60 },
+        color: { value: "#777" },
+        shape: { type: "circle" },
+        opacity: {
+          value: 0.3,
+          random: true,
+        },
+        size: {
+          value: 3,
+          random: true,
+        },
+        move: {
+          enable: true,
+          speed: 0.6,
+          direction: "none",
+          outModes: "bounce",
+        },
+      },
+      interactivity: {
+        events: {
+          onHover: { enable: false },
+          onClick: { enable: false },
+        },
+      },
+      background: {
+        color: "#000"
+      }
+    });
+  </script>
+</body>
+</html>
