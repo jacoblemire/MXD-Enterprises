@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MXD Enterprises</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: black;
+      color: white;
+      overflow-x: hidden;
+    }
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      position: relative;
+      z-index: 1;
+    }
+    .hero img {
+      width: 150px;
+      margin-bottom: 30px;
+    }
+    .hero h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin: 0 auto 40px;
+    }
+    .cta-button {
+      padding: 15px 30px;
+      font-size: 1em;
+      font-weight: bold;
+      color: black;
+      background-color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .cta-button:hover {
+      background-color: #f0f0f0;
+      transform: scale(1.05);
+    }
+    .details {
+      padding: 60px 20px;
+      background: #111;
+      text-align: center;
+    }
+    .details h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    .details ul {
+      list-style: none;
+      padding: 0;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+    .details li {
+      padding: 10px 0;
+      font-size: 1.1em;
+    }
+    .contact {
+      margin-top: 40px;
+      font-size: 1em;
+      color: #bbb;
+    }
+    .disclaimer {
+      padding: 30px 20px;
+      font-size: 0.9em;
+      background-color: #000;
+      color: #777;
+      text-align: center;
+    }
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="particles"></canvas>
+  <div class="hero">
+    <img src="a39d8eba-9983-4d16-93d0-3cbe9185184d.png" alt="MXD Logo" />
+    <h1>Earn High-Ticket Commission. Build Real Skills.</h1>
+    <p>This is your opportunity to break into online sales, earn up to $3,000/month, and get trained by real closers. No fluff. No BS. Let’s get you started.</p>
+    <a href="https://whop.com/checkout/plan_FfCu0luQBYnz0?d2c=true"><button class="cta-button">Join Now</button></a>
+  </div>
+
+  <div class="details">
+    <h2>What You'll Learn</h2>
+    <ul>
+      <li>Proven online sales techniques that actually convert</li>
+      <li>How to find leads, pitch, and close like a pro</li>
+      <li>Exclusive training from real closers with results</li>
+      <li>Access to our private sales community</li>
+    </ul>
+    <div class="contact">Questions? Reach out to us at <a href="mailto:contact@mxdenterprises.com" style="color:#999;">contact@mxdenterprises.com</a></div>
+  </div>
+
+  <div class="disclaimer">
+    This program is for educational purposes only. We do not guarantee any income, sales, or business results.
+    Your success depends on your individual effort, consistency, and market conditions.
+    This is not legal, tax, or financial advice.
+  </div>
+
+  <script>
+    const canvas = document.getElementById('particles');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const particlesArray = [];
+    const numberOfParticles = 100;
+
+    class Particle {
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2 + 1;
+        this.speedX = Math.random() * 1 - 0.5;
+        this.speedY = Math.random() * 1 - 0.5;
+        this.color = 'rgba(180,180,180,0.5)';
+      }
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+
+        if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+        if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+      }
+    }
+
+    function initParticles() {
+      for (let i = 0; i < numberOfParticles; i++) {
+        particlesArray.push(new Particle());
+      }
+    }
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particlesArray.forEach(particle => {
+        particle.update();
+        particle.draw();
+      });
+      requestAnimationFrame(animateParticles);
+    }
+
+    initParticles();
+    animateParticles();
+
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+  </script>
+</body>
+</html>
