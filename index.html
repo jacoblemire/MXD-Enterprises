@@ -4,166 +4,125 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MXD Sales Academy</title>
+  <title>MXD Enterprises</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
     body {
       margin: 0;
+      font-family: 'Inter', sans-serif;
       background-color: #000;
       color: #fff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       overflow-x: hidden;
     }
-    canvas#particles-js {
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    h1, h2, p {
+      margin: 0 0 20px;
+      line-height: 1.4;
+    }
+    h1 {
+      font-size: 2.5rem;
+    }
+    h2 {
+      font-size: 1.8rem;
+    }
+    .cta-button {
+      background: #fff;
+      color: #000;
+      padding: 15px 30px;
+      font-weight: bold;
+      font-size: 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s;
+    }
+    .cta-button:hover {
+      background: #00a86b;
+      color: #fff;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .card {
+      background: #111;
+      border-radius: 10px;
+      padding: 20px;
+      border: 1px solid #333;
+    }
+    footer {
+      background: #111;
+      padding: 40px 20px;
+      font-size: 0.85rem;
+      color: #aaa;
+      text-align: center;
+    }
+    .particle-bg {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       z-index: -1;
+      background: radial-gradient(circle at 30% 30%, rgba(0,168,107,0.2), transparent 60%),
+                  radial-gradient(circle at 70% 70%, rgba(128,128,128,0.2), transparent 60%);
+      animation: float 10s infinite alternate;
     }
-    .container {
-      padding: 80px 20px;
-      max-width: 800px;
-      margin: auto;
-      line-height: 1.6;
-    }
-    .logo {
-      text-align: center;
-      margin-bottom: 50px;
-    }
-    .logo img {
-      width: 160px;
-      height: auto;
-    }
-    h1 {
-      font-size: 2.5em;
-      margin-bottom: 20px;
-    }
-    h2 {
-      margin-top: 60px;
-      font-size: 1.8em;
-    }
-    p {
-      font-size: 1.1em;
-    }
-    ul {
-      font-size: 1.05em;
-    }
-    .button {
-      display: inline-block;
-      background-color: #fff;
-      color: #000;
-      padding: 15px 30px;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 30px;
-      transition: background 0.3s ease;
-    }
-    .button:hover {
-      background-color: #ccc;
-    }
-    .spacer {
-      height: 150px;
-    }
-    .disclaimer {
-      font-size: 0.85em;
-      color: #aaa;
-      margin-top: 80px;
-      padding-top: 40px;
-      border-top: 1px solid #333;
-    }
-    .contact {
-      margin-top: 40px;
-      text-align: center;
-      font-size: 0.95em;
-      color: #888;
+    @keyframes float {
+      from { transform: translateY(0); }
+      to { transform: translateY(-20px); }
     }
   </style>
 </head>
 <body>
-  <canvas id="particles-js"></canvas>
+  <div class="particle-bg"></div>
 
-  <div class="container">
-    <div class="logo">
-      <img src="mxd_logo_white.png" alt="MXD Logo" />
+  <section style="text-align: center;">
+    <h1>Break Into Remote High-Ticket Sales & Earn $5K+/Month</h1>
+    <p>Join MXD Enterprises and build the discipline, mindset, and skills needed to master sales, create time freedom, and realign your life.</p>
+    <a href="#academy" class="cta-button">Join the Academy</a>
+  </section>
+
+  <section>
+    <h2 style="text-align: center;">What You'll Learn Inside MXD Academy</h2>
+    <div class="grid">
+      <div class="card">Proven DM Scripts That Convert $995+ Deals</div>
+      <div class="card">Mindset Mastery & Unshakable Confidence</div>
+      <div class="card">Remote Work Systems & Lifestyle Discipline</div>
+      <div class="card">High-Ticket Sales Closing Techniques</div>
+      <div class="card">1-on-1 Mentorship & Private Support</div>
+      <div class="card">Affiliate Commission + Team Placement</div>
     </div>
+  </section>
 
-    <h1>Break into Remote High-Ticket Sales</h1>
-    <p>
-      Learn how to earn up to <strong>$5,000/month remotely</strong> while aligning with your goals, developing discipline, and gaining true <strong>time and location freedom</strong>.
+  <section>
+    <h2 style="text-align: center;">About MXD Enterprises</h2>
+    <p style="text-align: center; max-width: 800px; margin: auto;">
+      MXD = Mindset x Discipline. We're here to help you shift. Our academy trains closers through structure, clarity, and elite sales systems. Everything is built with intention and results in mind — no gimmicks.
     </p>
+  </section>
+
+  <section style="text-align: center;">
+    <h2>Book a 1-on-1 Clarity Call With Jada</h2>
+    <p>Have questions? Book a free session and get aligned with the next step in your remote sales journey.</p>
+    <a href="https://calendly.com/jadafig1" target="_blank" class="cta-button">Book Your Free Call</a>
+  </section>
+
+  <footer>
     <p>
-      No corporate leash. No fluff. Just real closers and real results.
+      This program is for educational and informational purposes only. The content, coaching, and curriculum offered by MXD Enterprises is not intended to be a guarantee of income, business success, or financial results. Any testimonials, examples, or case studies shared are not promises of future earnings and should not be relied on as such.
+      <br><br>
+      Your success is 100% dependent on your personal effort, consistency, discipline, and the unique variables in your life and market. MXD does not act as a financial advisor, legal advisor, employment recruiter, or investment agency. Participation in this program does not create a client-coach or employer-employee relationship.
+      <br><br>
+      You are solely responsible for your financial decisions and results. We encourage you to consult your own legal, tax, and financial professionals before making any major decisions based on what you learn through MXD Enterprises.
+      <br><br>
+      By enrolling in our programs or interacting with our content, you acknowledge and accept that we provide no guarantees, warranties, or assurances of any kind — and that you are voluntarily assuming any and all risk associated with your participation.
     </p>
-
-    <a class="button" href="https://whop.com/checkout/plan_FfCu0luQBYnz0?d2c=true">Join Now</a>
-
-    <h2>What You'll Learn</h2>
-    <ul>
-      <li>Mindset of top 1% earners</li>
-      <li>Our proven DM script to close $1K+ sales</li>
-      <li>Confidence, self-mastery & clarity</li>
-      <li>Remote lifestyle strategies</li>
-      <li>Access to the MXD private community</li>
-      <li>Real mentorship & opportunity placement</li>
-    </ul>
-
-    <h2>What MXD Stands For</h2>
-    <p><strong>MXD = Mindset x Discipline</strong></p>
-    <p>
-      We’re not just training salespeople.  
-      We’re building <strong>leaders</strong> who take full ownership of their life.  
-      Diversity, authenticity, growth, and real community — that’s what we stand for.
-    </p>
-
-    <div class="spacer"></div>
-
-    <div class="disclaimer">
-      <p><strong>Disclaimer:</strong> This program is for educational purposes only. We do not guarantee any income, sales, or business results. Your success depends on your individual effort, consistency, and market conditions. This is not legal, tax, or financial advice.</p>
-    </div>
-
-    <div class="contact">
-      Contact us: <a href="mailto:contact@mxdenterprises.com">contact@mxdenterprises.com</a>
-    </div>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
-  <script>
-    tsParticles.load("particles-js", {
-      fullScreen: { enable: false },
-      particles: {
-        number: { value: 60 },
-        color: { value: "#777" },
-        shape: { type: "circle" },
-        opacity: {
-          value: 0.3,
-          random: true,
-        },
-        size: {
-          value: 3,
-          random: true,
-        },
-        move: {
-          enable: true,
-          speed: 0.6,
-          direction: "none",
-          outModes: "bounce",
-        },
-      },
-      interactivity: {
-        events: {
-          onHover: { enable: false },
-          onClick: { enable: false },
-        },
-      },
-      background: {
-        color: "#000"
-      }
-    });
-  </script>
+    <p>Contact: contact@mxdenterprises.com</p>
+  </footer>
 </body>
 </html>
