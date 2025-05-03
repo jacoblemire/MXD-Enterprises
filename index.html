@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,8 +14,16 @@
       color: #fff;
       overflow-x: hidden;
     }
+    header {
+      text-align: center;
+      padding: 40px 0 20px;
+    }
+    header img {
+      width: 100px;
+      height: auto;
+    }
     section {
-      padding: 60px 20px;
+      padding: 80px 20px;
       max-width: 1000px;
       margin: 0 auto;
     }
@@ -25,10 +32,10 @@
       line-height: 1.4;
     }
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.7rem;
     }
     h2 {
-      font-size: 1.8rem;
+      font-size: 1.9rem;
     }
     .cta-button {
       background: #fff;
@@ -55,12 +62,30 @@
       padding: 20px;
       border: 1px solid #333;
     }
+    .video-container {
+      max-width: 800px;
+      margin: 60px auto;
+      text-align: center;
+    }
+    .video-container iframe {
+      width: 100%;
+      height: 450px;
+      border: none;
+      border-radius: 10px;
+    }
     footer {
       background: #111;
-      padding: 40px 20px;
+      padding: 60px 20px;
       font-size: 0.85rem;
       color: #aaa;
       text-align: center;
+    }
+    footer a {
+      color: #00a86b;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
     }
     .particle-bg {
       position: fixed;
@@ -82,16 +107,27 @@
 <body>
   <div class="particle-bg"></div>
 
+  <header>
+    <a href="/">
+      <img src="logo.png" alt="MXD Enterprises Logo">
+    </a>
+  </header>
+
   <section style="text-align: center;">
-    <h1>Break Into Remote High-Ticket Sales & Earn $5K+/Month</h1>
+    <h1>Break Into Remote High-Ticket Sales & Earn Big From Anywhere</h1>
     <p>Join MXD Enterprises and build the discipline, mindset, and skills needed to master sales, create time freedom, and realign your life.</p>
     <a href="#academy" class="cta-button">Join the Academy</a>
   </section>
 
+  <div class="video-container">
+    <!-- Embed Jada's intro video here when ready -->
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen title="MXD Intro Video"></iframe>
+  </div>
+
   <section>
     <h2 style="text-align: center;">What You'll Learn Inside MXD Academy</h2>
     <div class="grid">
-      <div class="card">Proven DM Scripts That Convert $995+ Deals</div>
+      <div class="card">Proven DM Scripts That Convert High-Ticket Deals</div>
       <div class="card">Mindset Mastery & Unshakable Confidence</div>
       <div class="card">Remote Work Systems & Lifestyle Discipline</div>
       <div class="card">High-Ticket Sales Closing Techniques</div>
@@ -123,7 +159,7 @@
       <br><br>
       By enrolling in our programs or interacting with our content, you acknowledge and accept that we provide no guarantees, warranties, or assurances of any kind — and that you are voluntarily assuming any and all risk associated with your participation.
     </p>
-    <p>Contact: contact@mxdenterprises.com</p>
+    <p>Contact: <a href="mailto:contact@mxdenterprises.com">contact@mxdenterprises.com</a></p>
   </footer>
 </body>
 </html>
