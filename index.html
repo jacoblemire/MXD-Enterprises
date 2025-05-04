@@ -1,166 +1,125 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MXD Enterprises</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #000;
-      color: #fff;
-      overflow-x: hidden;
-    }
-    header {
-      text-align: center;
-      padding: 40px 0 20px;
-    }
-    header img {
-      width: 100px;
-      height: auto;
-    }
-    section {
-      padding: 80px 20px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    h1, h2, p {
-      margin: 0 0 20px;
-      line-height: 1.4;
-    }
-    h1 {
-      font-size: 2.7rem;
-    }
-    h2 {
-      font-size: 1.9rem;
-    }
-    .cta-button {
-      background: #fff;
-      color: #000;
-      padding: 15px 30px;
-      font-weight: bold;
-      font-size: 1rem;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: background 0.3s, color 0.3s;
-    }
-    .cta-button:hover {
-      background: #00a86b;
-      color: #fff;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-    }
-    .card {
-      background: #111;
-      border-radius: 10px;
-      padding: 20px;
-      border: 1px solid #333;
-    }
-    .video-container {
-      max-width: 800px;
-      margin: 60px auto;
-      text-align: center;
-    }
-    .video-container iframe {
-      width: 100%;
-      height: 450px;
-      border: none;
-      border-radius: 10px;
-    }
-    footer {
-      background: #111;
-      padding: 60px 20px;
-      font-size: 0.85rem;
-      color: #aaa;
-      text-align: center;
-    }
-    footer a {
-      color: #00a86b;
-      text-decoration: none;
-    }
-    footer a:hover {
-      text-decoration: underline;
-    }
-    .particle-bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      background: radial-gradient(circle at 30% 30%, rgba(0,168,107,0.2), transparent 60%),
-                  radial-gradient(circle at 70% 70%, rgba(128,128,128,0.2), transparent 60%);
-      animation: float 10s infinite alternate;
-    }
-    @keyframes float {
-      from { transform: translateY(0); }
-      to { transform: translateY(-20px); }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MXD Enterprises</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+        header, footer {
+            padding: 2rem;
+            text-align: center;
+            background-color: #111;
+        }
+        h1, h2 {
+            color: #e60000;
+        }
+        section {
+            padding: 2rem;
+            max-width: 900px;
+            margin: auto;
+        }
+        .cta, .calendly-btn {
+            background-color: #e60000;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1rem;
+            margin-right: 1rem;
+        }
+        .highlight {
+            background-color: #1a1a1a;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li::before {
+            content: "✔️ ";
+        }
+        .disclaimer {
+            font-size: 0.9rem;
+            color: #aaa;
+            line-height: 1.6;
+        }
+        a {
+            color: #e60000;
+        }
+    </style>
 </head>
 <body>
-  <div class="particle-bg"></div>
 
-  <header>
-    <a href="/">
-      <img src="logo.png" alt="MXD Enterprises Logo">
-    </a>
-  </header>
+<header>
+    <h1>MXD Enterprises</h1>
+    <p>Create Time + Location Freedom Through High-Ticket Sales</p>
+    <a href="https://learn.mxdenterprises.com" class="cta">Start Learning</a>
+    <a href="https://calendly.com/jadasalescall" class="calendly-btn">Book a Call with Jada</a>
+</header>
 
-  <section style="text-align: center;">
-    <h1>Break Into Remote High-Ticket Sales & Earn Big From Anywhere</h1>
-    <p>Join MXD Enterprises and build the discipline, mindset, and skills needed to master sales, create time freedom, and realign your life.</p>
-    <a href="#academy" class="cta-button">Join the Academy</a>
-  </section>
+<section>
+    <h2>What is MXD?</h2>
+    <p>MXD stands for Mindset x Discipline. We teach remote sales, but more than that—we guide people to create a lifestyle of freedom, alignment, and growth. This isn’t hype. It’s a new path to work-from-anywhere income through high-ticket offers.</p>
+</section>
 
-  <div class="video-container">
-    <!-- Embed Jada's intro video here when ready -->
-    <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen title="MXD Intro Video"></iframe>
-  </div>
+<section class="highlight">
+    <h2>This is for you if...</h2>
+    <ul>
+        <li>You’re tired of your 9–5 and want out</li>
+        <li>You want to earn money without a degree</li>
+        <li>You want to work from your phone anywhere in the world</li>
+        <li>You’re ready to learn a skill that pays</li>
+        <li>You want to be part of a real community and grow</li>
+    </ul>
+</section>
 
-  <section>
-    <h2 style="text-align: center;">What You'll Learn Inside MXD Academy</h2>
-    <div class="grid">
-      <div class="card">Proven DM Scripts That Convert High-Ticket Deals</div>
-      <div class="card">Mindset Mastery & Unshakable Confidence</div>
-      <div class="card">Remote Work Systems & Lifestyle Discipline</div>
-      <div class="card">High-Ticket Sales Closing Techniques</div>
-      <div class="card">1-on-1 Mentorship & Private Support</div>
-      <div class="card">Affiliate Commission + Team Placement</div>
-    </div>
-  </section>
+<section class="highlight">
+    <h2>This is NOT for you if...</h2>
+    <ul>
+        <li>You want overnight success with no effort</li>
+        <li>You’re not ready to put in real work</li>
+        <li>You don’t want to grow into a better version of yourself</li>
+        <li>You aren't open to being coached or challenged</li>
+    </ul>
+</section>
 
-  <section>
-    <h2 style="text-align: center;">About MXD Enterprises</h2>
-    <p style="text-align: center; max-width: 800px; margin: auto;">
-      MXD = Mindset x Discipline. We're here to help you shift. Our academy trains closers through structure, clarity, and elite sales systems. Everything is built with intention and results in mind — no gimmicks.
-    </p>
-  </section>
+<section>
+    <h2>What You’ll Learn When You Tap In</h2>
+    <ul>
+        <li>How high-ticket sales works from the inside</li>
+        <li>Why this is one of the most untapped income streams right now</li>
+        <li>How real people are earning $5K–$10K a month remotely</li>
+        <li>The skills companies actually pay for</li>
+        <li>The steps to align income with purpose</li>
+    </ul>
+</section>
 
-  <section style="text-align: center;">
-    <h2>Book a 1-on-1 Clarity Call With Jada</h2>
-    <p>Have questions? Book a free session and get aligned with the next step in your remote sales journey.</p>
-    <a href="https://calendly.com/jadafig1" target="_blank" class="cta-button">Book Your Free Call</a>
-  </section>
+<section>
+    <h2>About the Movement</h2>
+    <p>MXD isn’t just a business—it’s a movement. Built for those who are serious about becoming more. We lead with authenticity, growth, and alignment. This is about building something real and becoming someone you’re proud of.</p>
+</section>
 
-  <footer>
-    <p>
-      This program is for educational and informational purposes only. The content, coaching, and curriculum offered by MXD Enterprises is not intended to be a guarantee of income, business success, or financial results. Any testimonials, examples, or case studies shared are not promises of future earnings and should not be relied on as such.
-      <br><br>
-      Your success is 100% dependent on your personal effort, consistency, discipline, and the unique variables in your life and market. MXD does not act as a financial advisor, legal advisor, employment recruiter, or investment agency. Participation in this program does not create a client-coach or employer-employee relationship.
-      <br><br>
-      You are solely responsible for your financial decisions and results. We encourage you to consult your own legal, tax, and financial professionals before making any major decisions based on what you learn through MXD Enterprises.
-      <br><br>
-      By enrolling in our programs or interacting with our content, you acknowledge and accept that we provide no guarantees, warranties, or assurances of any kind — and that you are voluntarily assuming any and all risk associated with your participation.
-    </p>
-    <p>Contact: <a href="mailto:contact@mxdenterprises.com">contact@mxdenterprises.com</a></p>
-  </footer>
+<section class="disclaimer">
+    <h2>Disclaimer</h2>
+    <p>This program and website are for educational and informational purposes only. MXD Enterprises does not guarantee income, career results, or success of any kind. Your success depends entirely on your own effort, consistency, work ethic, application of knowledge, and market conditions. All testimonials are individual results and do not reflect typical outcomes. By participating in our course or engaging with our brand, you acknowledge that MXD Enterprises is not responsible for your financial, persona...
+</section>
+
+<footer>
+    <p>Contact us: <a href="mailto:contact@mxdenterprises.com">contact@mxdenterprises.com</a></p>
+    <p>&copy; 2025 MXD Enterprises. All Rights Reserved.</p>
+</footer>
+
 </body>
 </html>
