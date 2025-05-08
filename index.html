@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MXD Enterprises</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -31,15 +31,43 @@
       margin-bottom: 1rem;
     }
 
+    .video-section h2 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
     p {
       font-size: 1.1rem;
       line-height: 1.7;
     }
 
     section {
-      padding: 2.5rem 1rem;
+      padding: 3rem 1rem;
       max-width: 900px;
       margin: auto;
+    }
+
+    .video-section {
+      text-align: center;
+      padding-top: 5rem;
+    }
+
+    .subtext {
+      text-align: center;
+      color: #cfcfcf;
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 720px;
+      height: 450px;
+      border: none;
+      border-radius: 12px;
+      margin-bottom: 2rem;
     }
 
     .cta {
@@ -52,7 +80,7 @@
       cursor: pointer;
       text-decoration: none;
       display: inline-block;
-      margin-top: 1.5rem;
+      margin-top: 1rem;
       border-radius: 10px;
       transition: transform 0.2s ease, box-shadow 0.3s ease;
     }
@@ -85,36 +113,6 @@
       margin-right: 0.5rem;
     }
 
-    .video-section {
-      text-align: center;
-      margin-top: 5rem;
-    }
-
-    iframe {
-      width: 100%;
-      max-width: 720px;
-      height: 450px;
-      border: none;
-      border-radius: 12px;
-      margin-top: 1rem;
-    }
-
-    .disclaimer {
-      font-size: 0.9rem;
-      color: #999;
-      line-height: 1.7;
-      margin-top: 3rem;
-      border-top: 1px solid #333;
-      padding-top: 2rem;
-    }
-
-    .subtext {
-      text-align: center;
-      color: #cfcfcf;
-      font-size: 0.95rem;
-      margin-bottom: 1.2rem;
-    }
-
     .center {
       text-align: center;
     }
@@ -127,6 +125,31 @@
     a:hover {
       text-decoration: underline;
     }
+
+    .disclaimer {
+      font-size: 0.9rem;
+      color: #999;
+      line-height: 1.7;
+      margin-top: 3rem;
+      border-top: 1px solid #333;
+      padding-top: 2rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    @media screen and (max-width: 768px) {
+      .video-section h2 {
+        font-size: 2rem;
+      }
+      iframe {
+        height: 220px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -134,11 +157,11 @@
   <div class="brand-top-left">MXD Enterprises</div>
 
   <section class="video-section">
-    <h2>Want Freedom Through Remote Income? Watch This First.</h2>
+    <h2>Want Freedom Through Remote Income?<br>Watch This First.</h2>
     <p class="subtext">This is where it started — no hype, just the skill that changed everything.</p>
-    <iframe src="https://www.youtube.com/embed/G_xrEi_Z-nU" 
-      title="MXD Enterprises Training Video" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    <iframe src="https://www.youtube.com/embed/G_xrEi_Z-nU"
+      title="MXD Enterprises Training Video"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowfullscreen></iframe>
     <div class="center">
       <a href="https://learn.mxdenterprises.com" class="cta">Access the Free Training</a>
