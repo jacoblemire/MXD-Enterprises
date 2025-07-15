@@ -1,222 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MXD Enterprises</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #000;
-      color: #f5f5f5;
-      scroll-behavior: smooth;
-    }
-
-    .brand-top-left {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      font-size: 0.9rem;
-      color: #ccc;
-      opacity: 0.7;
-      z-index: 1000;
-    }
-
-    h2 {
-      font-size: 2rem;
-      font-weight: 600;
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-
-    .video-section h2 {
-      font-size: 2.8rem;
-      font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 2rem;
-    }
-
-    section {
-      padding: 3rem 1rem;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .video-section {
-      text-align: center;
-      padding-top: 5rem;
-    }
-
-    iframe {
-      width: 100%;
-      max-width: 720px;
-      height: 450px;
-      border: none;
-      border-radius: 12px;
-      margin-bottom: 2rem;
-    }
-
-    .cta {
-      background-color: #5bd6a2;
-      color: #000;
-      padding: 1rem 2rem;
-      border: none;
-      font-size: 1.1rem;
-      font-weight: bold;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 1rem;
-      border-radius: 10px;
-      transition: transform 0.2s ease, box-shadow 0.3s ease;
-    }
-
-    .cta:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 15px rgba(91, 214, 162, 0.4);
-    }
-
-    .highlight {
-      background-color: #1e1e1e;
-      padding: 2rem;
-      border-radius: 12px;
-      margin-top: 2.5rem;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    li {
-      margin: 0.75rem 0;
-      font-size: 1.05rem;
-    }
-
-    li::before {
-      content: "✓";
-      color: #5bd6a2;
-      margin-right: 0.5rem;
-    }
-
-    .center {
-      text-align: center;
-    }
-
-    a {
-      color: #5bd6a2;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .disclaimer {
-      font-size: 0.9rem;
-      color: #999;
-      line-height: 1.7;
-      margin-top: 3rem;
-      border-top: 1px solid #333;
-      padding-top: 2rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.9rem;
-      color: #777;
-    }
-
-    @media screen and (max-width: 768px) {
-      .video-section h2 {
-        font-size: 2rem;
-      }
-      iframe {
-        height: 220px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MXD Enterprises: A movement for diverse, growth-driven individuals pursuing authenticity, community, and online freedom through coaching, programs, and premium clothing.">
+    <meta name="keywords" content="high-ticket sales coaching, online entrepreneurship, remote income, digital business coaching">
+    <title>MXD Enterprises</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        .accent-color {
+            color: #5bd6a2;
+        }
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        header {
+            backdrop-filter: blur(10px);
+        }
+        .underline-accent {
+            position: relative;
+        }
+        .underline-accent::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 2px;
+            background: #5bd6a2;
+        }
+    </style>
 </head>
-<body>
+<body class="smooth-scroll">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full bg-[#000000] bg-opacity-90 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white">MXD Enterprises</a>
+            <nav>
+                <ul class="flex list-none m-0 p-0 space-x-6">
+                    <li><a href="#" class="text-white hover:text-[#5bd6a2] transition text-sm">Home</a></li>
+                    <li><a href="#programs" class="text-white hover:text-[#5bd6a2] transition text-sm">Programs</a></li>
+                    <li><a href="#testimonials" class="text-white hover:text-[#5bd6a2] transition text-sm">Results</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <div class="brand-top-left">MXD Enterprises</div>
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center bg-[#000000] bg-opacity-70 pt-16" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));">
+        <div class="max-w-4xl mx-auto text-center px-4 fade-in">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+                <span class="block text-xl accent-color mb-2">MXD Enterprises</span>
+                Empowering Digital Success
+            </h1>
+            <p class="text-lg sm:text-xl text-silver mb-8 max-w-2xl mx-auto">Master the skills to build location-independent income streams with our proven systems, mentorship, and community-driven movement.</p>
+            <div class="space-x-4">
+                <a href="#programs" class="inline-block bg-[#5bd6a2] text-black font-semibold py-3 px-6 rounded-full hover:bg-[#4ac590] transition">Explore Programs</a>
+                <a href="https://mixedcultureco.com" target="_blank" class="inline-block bg-transparent border-2 border-[#5bd6a2] text-[#5bd6a2] font-semibold py-3 px-6 rounded-full hover:bg-[#5bd6a2] hover:text-black transition">Shop MXD Clothing</a>
+                <a href="#contact" class="inline-block bg-transparent border-2 border-white text-white font-semibold py-3 px-6 rounded-full hover:bg-white hover:text-black transition">Join the Movement</a>
+            </div>
+        </div>
+    </section>
 
-  <section class="video-section">
-    <h2>Want Freedom Through Remote Income?<br>Watch This First.</h2>
-    <iframe src="https://www.youtube.com/embed/G_xrEi_Z-nU"
-      title="MXD Enterprises Training Video"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen></iframe>
-    <div class="center">
-      <a href="https://learn.mxdenterprises.com" class="cta">Access the Free Training</a>
-    </div>
-  </section>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-[#000000]">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-white mb-12 fade-in underline-accent">Our Story</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="fade-in">
+                    <p class="text-lg text-silver mb-6">MXD Enterprises began as Mixed Culture, a clothing brand born from a passion for diversity and authenticity. Founded by Jada and Jacob, it evolved into a movement that transcends fashion, embracing high-ticket sales coaching and community-driven impact.</p>
+                    <p class="text-lg text-silver mb-6">Today, MXD is more than merch—it’s a mission to empower growth-oriented individuals to achieve online freedom. We’re dedicated to giving back, with a portion of every clothing sale supporting local communities and nonprofit initiatives worldwide.</p>
+                    <p class="text-lg text-silver">Our vision is to build a global community of diverse, ambitious individuals united by authenticity and driven by purpose.</p>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <img src="https://via.placeholder.com/300x400?text=Jada" alt="Jada" class="rounded-lg w-full h-auto fade-in">
+                    <img src="https://via.placeholder.com/300x400?text=Jacob" alt="Jacob" class="rounded-lg w-full h-auto fade-in">
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section class="highlight">
-    <h2>This is for you if...</h2>
-    <ul>
-      <li>You’re ready to build a life around freedom</li>
-      <li>You’re curious about remote income but want a clear path</li>
-      <li>You’re done waiting for permission to grow</li>
-      <li>You want real skills, not trends</li>
-      <li>You value community, mentorship, and purpose</li>
-    </ul>
-    <div class="center">
-      <a href="https://learn.mxdenterprises.com" class="cta">This Sounds Like Me</a>
-    </div>
-  </section>
+    <!-- Programs Section -->
+    <section id="programs" class="py-20 bg-[#0a0a0a]">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-white mb-6 fade-in underline-accent">Our Programs</h2>
+            <p class="text-lg text-silver text-center mb-12 fade-in">Led by Jada and Jacob, our programs empower you with real skills, mentorship, and community to build a life of freedom through high-ticket sales and innovative tools. If you’re ready to stop waiting and start succeeding, this is your path.</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Aligned Closers Academy -->
+                <div class="bg-[#1e1e1e] p-6 rounded-lg border border-[rgba(255,255,255,0.1)] fade-in">
+                    <h3 class="text-2xl font-semibold text-white mb-4">Aligned Closers Academy</h3>
+                    <p class="text-silver mb-4">Master high-ticket sales to unlock remote income freedom. Learn to close $3k–$20k deals, master sales psychology, and earn $5k–$10k+/mo with weekly elite coaching.</p>
+                    <div class="video-container mb-4">
+                        <iframe src="https://www.youtube.com/embed/G_xrEi_Z-nU" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <p class="text-silver mb-6 italic">"The Aligned Closers Academy transformed my mindset. It taught me to believe in myself, shift my perspective, and now I approach every challenge with confidence." – Brianna L.</p>
+                    <a href="https://alignedclosers.com" target="_blank" class="inline-block bg-[#5bd6a2] text-black font-semibold py-2 px-4 rounded-full hover:bg-[#4ac590] transition">Access Free Training</a>
+                </div>
+                <!-- YEP Program -->
+                <div class="bg-[#1e1e1e] p-6 rounded-lg border border-[rgba(255,255,255,0.1)] fade-in">
+                    <span class="inline-block bg-[rgba(91,214,162,0.2)] text-[#5bd6a2] text-xs px-3 py-1 rounded-full mb-2">COMING SOON</span>
+                    <h3 class="text-2xl font-semibold text-white mb-2">YEP Program</h3>
+                    <p class="text-sm text-silver mb-4">(Young Entrepreneur Program)</p>
+                    <p class="text-silver mb-4">A blueprint for online business success with a business launch framework, credit & funding strategies, high-ticket offers, and daily accountability for under-25 entrepreneurs.</p>
+                    <p class="text-silver mb-6 italic">"YEP changed my mindset and scaled my credit, giving me the confidence to build my financial future at 19." – Anthony Derr</p>
+                    <a href="https://api.leadconnectorhq.com/widget/form/d7LMNSTWYZNSUgqHSaZm" target="_blank" class="inline-block bg-transparent border-2 border-[#5bd6a2] text-[#5bd6a2] font-semibold py-2 px-4 rounded-full hover:bg-[#5bd6a2] hover:text-black transition">Join Waitlist</a>
+                </div>
+                <!-- PlugBot -->
+                <div class="bg-[#1e1e1e] p-6 rounded-lg border border-[rgba(255,255,255,0.1)] fade-in">
+                    <span class="inline-block bg-[rgba(91,214,162,0.2)] text-[#5bd6a2] text-xs px-3 py-1 rounded-full mb-2">COMING SOON</span>
+                    <h3 class="text-2xl font-semibold text-white mb-4">PlugBot</h3>
+                    <p class="text-silver mb-4">An AI-powered tool for lead qualification and sales appointment setting, streamlining your path to remote income with efficiency and precision.</p>
+                    <p class="text-silver mb-6 italic">"The Aligned Closers Academy transformed my mindset. It taught me to believe in myself, shift my perspective, and now I approach every challenge with confidence." – Brianna L.</p>
+                    <a href="#contact" class="inline-block bg-transparent border-2 border-[#5bd6a2] text-[#5bd6a2] font-semibold py-2 px-4 rounded-full hover:bg-[#5bd6a2] hover:text-black transition">Learn More</a>
+                </div>
+                <!-- MXD Godwin Consulting -->
+                <div class="bg-[#1e1e1e] p-6 rounded-lg border border-[rgba(255,255,255,0.1)] fade-in">
+                    <h3 class="text-2xl font-semibold text-white mb-4">MXD Consulting</h3>
+                    <p class="text-silver mb-4">Personalized strategies and systems for individuals and businesses to create digital income pathways with discipline, alignment, and purpose.</p>
+                    <p class="text-silver mb-6 italic">"YEP changed my mindset and scaled my credit, giving me the confidence to build my financial future at 19." – Anthony Derr</p>
+                    <a href="https://learn.mxdenterprises.com/book" target="_blank" class="inline-block bg-[#5bd6a2] text-black font-semibold py-2 px-4 rounded-full hover:bg-[#4ac590] transition">Book a Consultation</a>
+                </div>
+            </div>
+            <p class="text-center text-silver mt-8 fade-in">*This program and website are for educational and informational purposes only. MXD Enterprises does not guarantee income, career results, or success of any kind. Your success depends entirely on your own effort, consistency, work ethic, application of knowledge, and market conditions.</p>
+        </div>
+    </section>
 
-  <section class="highlight">
-    <h2>This might not be for you if...</h2>
-    <ul>
-      <li>You want results without effort or direction</li>
-      <li>You’re chasing shortcuts instead of building skill</li>
-      <li>You’re not open to being coached or challenged</li>
-    </ul>
-  </section>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-[#0a0a0a]">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-white mb-12 fade-in underline-accent">Success Stories</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-[#1e1e1e] p-6 rounded-lg border border-[rgba(255,255,255,0.1)] fade-in">
+                    <p class="text-silver italic mb-4">"The Aligned Closers Academy transformed my mindset. It taught me to believe in myself, shift my perspective, and now I approach every challenge with confidence."</p>
+                    <p class="text-white font-semibold">– Brianna L.</p>
+                </div>
+                <div class="bg-[#1e1e1e] p-6 rounded-lg border border-[rgba(255,255,255,0.1)] fade-in">
+                    <p class="text-silver italic mb-4">"YEP changed my mindset and scaled my credit, giving me the confidence to build my financial future at 19."</p>
+                    <p class="text-white font-semibold">– Anthony Derr</p>
+                </div>
+            </div>
+            <p class="text-center text-silver mt-8 fade-in">*Results may vary. Success depends on individual effort and market conditions.</p>
+        </div>
+    </section>
 
-  <section>
-    <h2>What You'll Learn</h2>
-    <ul>
-      <li>The basics of remote high-ticket sales</li>
-      <li>Why this skill unlocks freedom (not just income)</li>
-      <li>How to position yourself for remote opportunities</li>
-      <li>Stories of others who’ve built freedom through sales</li>
-      <li>How we built this step-by-step — and how you can too</li>
-    </ul>
-    <div class="center">
-      <a href="https://learn.mxdenterprises.com" class="cta">Start the Free Training</a>
-    </div>
-  </section>
+    <!-- Clothing Section -->
+    <section id="clothing" class="py-20 bg-[#0a0a0a]">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-white mb-12 fade-in underline-accent">Wear the Movement</h2>
+            <p class="text-lg text-silver text-center mb-8 fade-in">A portion of proceeds from every piece of MXD clothing supports local communities and nonprofit initiatives worldwide.</p>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="fade-in">
+                    <img src="https://mixedcultureco.com/cdn/shop/files/1_1.webp" alt="MXD Clothing Item 1" class="rounded-lg w-full h-auto">
+                </div>
+                <div class="fade-in">
+                    <img src="https://mixedcultureco.com/cdn/shop/files/2_1.webp" alt="MXD Clothing Item 2" class="rounded-lg w-full h-auto">
+                </div>
+                <div class="fade-in">
+                    <img src="https://mixedcultureco.com/cdn/shop/files/3_1.webp" alt="MXD Clothing Item 3" class="rounded-lg w-full h-auto">
+                </div>
+            </div>
+            <div class="text-center mt-8 fade-in">
+                <a href="https://mixedcultureco.com" target="_blank" class="inline-block bg-[#5bd6a2] text-black font-semibold py-3 px-6 rounded-full hover:bg-[#4ac590] transition">Shop the Collection</a>
+            </div>
+        </div>
+    </section>
 
-  <section>
-    <h2>About the Movement</h2>
-    <p>MXD isn’t just a course — it’s a movement. We’re Jacob and Jada. We built this life through high-ticket sales, and now we show others how to create their own freedom through alignment, discipline, and skill. If you’re meant for more, this is where it starts.</p>
-    <div class="center">
-      <a href="https://learn.mxdenterprises.com" class="cta">Join the Movement</a>
-    </div>
-  </section>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-[#000000]">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-white mb-12 fade-in underline-accent">Get in Touch</h2>
+            <div class="max-w-lg mx-auto fade-in">
+                <div class="bg-[#1e1e1e] p-6 rounded-lg border border-[rgba(255,255,255,0.1)]">
+                    <p class="text-silver mb-6">Ready to join the movement? Fill out the form below or connect with us.</p>
+                    <div class="space-y-4">
+                        <input type="text" placeholder="Full Name" class="w-full p-3 bg-[#1a1a1a] border border-silver rounded-lg text-white focus:outline-none focus:border-[#5bd6a2]">
+                        <input type="email" placeholder="Email Address" class="w-full p-3 bg-[#1a1a1a] border border-silver rounded-lg text-white focus:outline-none focus:border-[#5bd6a2]">
+                        <textarea placeholder="Your Message" rows="5" class="w-full p-3 bg-[#1a1a1a] border border-silver rounded-lg text-white focus:outline-none focus:border-[#5bd6a2]"></textarea>
+                        <button class="w-full bg-[#5bd6a2] text-black font-semibold py-3 px-6 rounded-full hover:bg-[#4ac590] transition">Send Message</button>
+                    </div>
+                    <div class="text-center mt-6">
+                        <a href="https://learn.mxdenterprises.com/book" target="_blank" class="inline-block bg-transparent border-2 border-[#5bd6a2] text-[#5bd6a2] font-semibold py-2 px-4 rounded-full hover:bg-[#5bd6a2] hover:text-black transition">Book a Strategy Call</a>
+                    </div>
+                    <div class="flex justify-center space-x-4 mt-6">
+                        <a href="mailto:mxd.executive@gmail.com" class="text-silver hover:text-[#5bd6a2] transition">Email</a>
+                        <a href="https://www.instagram.com/aligned_closers" target="_blank" class="text-silver hover:text-[#5bd6a2] transition">Instagram</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section class="highlight">
-    <h2>Still Thinking About It?</h2>
-    <p class="center">If something here speaks to you, trust that. Drop your info — we’ll send the free training and let you decide what’s next.</p>
-    <div class="center">
-      <a href="https://learn.mxdenterprises.com" class="cta">Send Me the Free Training</a>
-    </div>
-  </section>
+    <!-- Footer -->
+    <footer class="py-8 bg-[#000000] border-t border-[rgba(255,255,255,0.1)] text-center">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div>
+                <h4 class="text-lg font-bold text-[#5bd6a2] mb-4">MXD Enterprises</h4>
+                <p class="text-sm text-silver">Empowering digital success.</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold text-[#5bd6a2] mb-4">Programs</h4>
+                <ul class="list-none p-0 text-sm text-silver">
+                    <li class="mb-2"><a href="https://alignedclosers.com" class="text-silver hover:text-[#5bd6a2] transition">Aligned Closers</a></li>
+                    <li class="mb-2"><a href="https://api.leadconnectorhq.com/widget/form/d7LMNSTWYZNSUgqHSaZm" target="_blank" class="text-silver hover:text-[#5bd6a2] transition">YEP</a></li>
+                    <li><a href="https://learn.mxdenterprises.com/book" target="_blank" class="text-silver hover:text-[#5bd6a2] transition">MXD Consulting</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold text-[#5bd6a2] mb-4">Company</h4>
+                <ul class="list-none p-0 text-sm text-silver">
+                    <li class="mb-2"><a href="#about" class="text-silver hover:text-[#5bd6a2] transition">About Us</a></li>
+                    <li><a href="#contact" class="text-silver hover:text-[#5bd6a2] transition">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold text-[#5bd6a2] mb-4">Connect</h4>
+                <ul class="list-none p-0 text-sm text-silver">
+                    <li class="mb-2"><a href="mailto:mxd.executive@gmail.com" class="text-silver hover:text-[#5bd6a2] transition">Email Us</a></li>
+                    <li><a href="https://www.instagram.com/aligned_closers" target="_blank" class="text-silver hover:text-[#5bd6a2] transition">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="text-silver text-sm mt-6">© 2025 MXD Enterprises. All rights reserved.</p>
+    </footer>
 
-  <section class="disclaimer">
-    <h2>Disclaimer</h2>
-    <p>This program and website are for educational and informational purposes only. MXD Enterprises does not guarantee income, career results, or success of any kind. Your success depends entirely on your own effort, consistency, work ethic, application of knowledge, and market conditions. Testimonials are individual results and do not reflect typical outcomes. By participating, you agree MXD is not responsible for your financial, personal, or business outcomes.</p>
-  </section>
-
-  <footer>
-    <p>Contact us: <a href="mailto:contact@mxdenterprises.com">contact@mxdenterprises.com</a></p>
-    <p>&copy; 2025 MXD Enterprises. All Rights Reserved.</p>
-  </footer>
-
+    <script>
+        // GSAP Animations
+        document.addEventListener('DOMContentLoaded', () => {
+            gsap.to('.fade-in', {
+                scrollTrigger: {
+                    trigger: '.fade-in',
+                    start: 'top 80%',
+                },
+                opacity: 1,
+                y: 0,
+                duration: 0.6,
+                stagger: 0.2,
+            });
+        });
+    </script>
 </body>
 </html>
