@@ -3,22 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MXD Enterprises: A movement for diverse, growth-driven individuals pursuing authenticity, community, and online freedom through coaching, programs, and premium clothing.">
-    <meta name="keywords" content="high-ticket sales coaching, online entrepreneurship, remote income, digital business coaching">
-    <title>MXD Enterprises</title>
+    <meta name="description" content="MXD Enterprises: Build remote income & digital freedom through high-ticket sales coaching, online business programs, and premium community support.">
+    <meta name="keywords" content="high-ticket sales coaching, online entrepreneurship, remote income, digital business coaching, MXD Enterprises, Aligned Closers Academy">
+    <meta name="author" content="MXD Enterprises">
+    <meta property="og:title" content="MXD Enterprises | Build Remote Income & Digital Freedom">
+    <meta property="og:description" content="Master high-ticket sales and online business with proven systems, mentorship, and community-driven movement.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mxdenterprises.com">
+    <meta property="og:image" content="https://mxdenterprises.com/images/social-share.jpg">
+    <meta name="theme-color" content="#000000">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>MXD Enterprises | Build Remote Income & Digital Freedom</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
     <style>
+        :root {
+            --accent-color: #5bd6a2;
+            --bg-dark: #000000;
+            --bg-darker: #0a0a0a;
+            --bg-card: #1e1e1e;
+            --text-primary: #ffffff;
+            --text-secondary: #b3b3b3;
+        }
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #000000;
-            color: #ffffff;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
             margin: 0;
             padding: 0;
+            line-height: 1.6;
         }
         .accent-color {
-            color: #5bd6a2;
+            color: var(--accent-color);
         }
         .smooth-scroll {
             scroll-behavior: smooth;
@@ -38,6 +58,14 @@
             height: 0;
             overflow: hidden;
             border-radius: 6px;
+            background: var(--bg-card);
+        }
+        @media (max-width: 640px) {
+            .video-container {
+                padding-bottom: 75%;
+                margin: 0 -1rem;
+                width: calc(100% + 2rem);
+            }
         }
         .video-container iframe {
             position: absolute;
@@ -52,6 +80,7 @@
         }
         .underline-accent {
             position: relative;
+            display: inline-block;
         }
         .underline-accent::after {
             content: '';
@@ -61,154 +90,182 @@
             transform: translateX(-50%);
             width: 40px;
             height: 2px;
-            background: #5bd6a2;
+            background: var(--accent-color);
+        }
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: #000;
+        }
+        .btn-primary:hover {
+            background-color: #4ac590;
+        }
+        .btn-outline {
+            border: 2px solid var(--accent-color);
+            color: var(--accent-color);
+        }
+        .btn-outline:hover {
+            background-color: var(--accent-color);
+            color: #000;
+        }
+        .btn-white {
+            border: 2px solid white;
+            color: white;
+        }
+        .btn-white:hover {
+            background-color: white;
+            color: #000;
+        }
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .active-nav {
+            color: var(--accent-color);
+            font-weight: 600;
         }
         @media (max-width: 640px) {
             h1 { font-size: 2rem; }
             h2 { font-size: 1.5rem; }
             p { font-size: 0.9rem; }
-            .video-container { padding-bottom: 75%; }
             .grid { grid-template-columns: 1fr; }
-            button { padding: 1.5px 3px; }
+        }
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+        .email-link {
+            color: var(--accent-color);
+            text-decoration: underline;
+            font-weight: 500;
         }
     </style>
 </head>
 <body class="smooth-scroll">
+    <!-- Skip to Content Link -->
+    <a href="#main-content" class="sr-only focus:not-sr-only">Skip to main content</a>
+
     <!-- Header -->
     <header class="fixed top-0 left-0 w-full bg-[#000000] bg-opacity-90 z-50">
-        <div class="max-w-6xl mx-auto px-3 sm:px-4 lg:px-6 py-2 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold text-white">MXD Enterprises</a>
-            <nav>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-white focus:outline-none focus:ring-2 focus:ring-[#5bd6a2] rounded">MXD Enterprises</a>
+            <nav aria-label="Main navigation">
                 <ul class="flex list-none m-0 p-0 space-x-4">
-                    <li><a href="#" class="text-white hover:text-[#5bd6a2] transition text-sm">Home</a></li>
-                    <li><a href="#programs" class="text-white hover:text-[#5bd6a2] transition text-sm">Programs</a></li>
-                    <li><a href="#testimonials" class="text-white hover:text-[#5bd6a2] transition text-sm">Results</a></li>
+                    <li><a href="#home" class="nav-link text-white hover:text-[#5bd6a2] transition text-sm focus:outline-none focus:ring-2 focus:ring-[#5bd6a2] rounded px-2 py-1">Home</a></li>
+                    <li><a href="#programs" class="nav-link text-white hover:text-[#5bd6a2] transition text-sm focus:outline-none focus:ring-2 focus:ring-[#5bd6a2] rounded px-2 py-1">Programs</a></li>
+                    <li><a href="#testimonials" class="nav-link text-white hover:text-[#5bd6a2] transition text-sm focus:outline-none focus:ring-2 focus:ring-[#5bd6a2] rounded px-2 py-1">Results</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="min-h-[70vh] flex items-center justify-center bg-[#000000] bg-opacity-70 pt-12" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));">
-        <div class="max-w-3xl mx-auto text-center px-3 fade-in">
+    <section id="home" class="min-h-[70vh] flex items-center justify-center bg-[#000000] bg-opacity-70 pt-16" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));">
+        <div class="max-w-3xl mx-auto text-center px-4 fade-in">
             <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3">
                 <span class="block text-lg accent-color mb-1">MXD Enterprises</span>
-                Empowering Digital Success
+                Build Remote Income & Digital Freedom
             </h1>
-            <p class="text-base sm:text-lg text-silver mb-5 max-w-xl mx-auto">Master the skills to build location-independent income streams with our proven systems, mentorship, and community-driven movement.</p>
-            <div class="space-x-3 mb-5">
-                <a href="#programs" class="inline-block bg-[#5bd6a2] text-black font-semibold py-2 px-4 rounded-full hover:bg-[#4ac590] transition text-sm">Explore Programs</a>
-                <a href="https://mixedcultureco.com" target="_blank" class="inline-block bg-transparent border-2 border-[#5bd6a2] text-[#5bd6a2] font-semibold py-2 px-4 rounded-full hover:bg-[#5bd6a2] hover:text-black transition text-sm">Shop MXD Clothing</a>
-                <a href="#contact" class="inline-block bg-transparent border-2 border-white text-white font-semibold py-2 px-4 rounded-full hover:bg-white hover:text-black transition text-sm">Join the Movement</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-12 bg-[#000000]">
-        <div class="max-w-6xl mx-auto px-3 sm:px-4 lg:px-6">
-            <h2 class="text-3xl font-bold text-center text-white mb-6 fade-in underline-accent">Our Story</h2>
-            <div class="fade-in">
-                <p class="text-base text-silver mb-4">MXD Enterprises began as Mixed Culture, a clothing brand born from a passion for diversity and authenticity. It evolved into a movement that transcends fashion, embracing high-ticket sales coaching and community-driven impact.</p>
-                <p class="text-base text-silver mb-4">Today, MXD is more than merch—it’s a mission to empower growth-oriented individuals to achieve online freedom. We’re dedicated to giving back, with a portion of every clothing sale supporting local communities and nonprofit initiatives worldwide.</p>
-                <p class="text-base text-silver">Our vision is to build a global community of diverse, ambitious individuals united by authenticity and driven by purpose.</p>
+            <p class="text-base sm:text-lg text-[#b3b3b3] mb-5 max-w-xl mx-auto">Master high-ticket sales and online business with proven systems, mentorship, and community-driven movement.</p>
+            <div class="flex flex-wrap justify-center gap-3 mb-5">
+                <a href="#programs" class="btn-primary font-semibold py-2 px-4 rounded-full transition text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:ring-[#5bd6a2]">Explore Programs</a>
+                <a href="https://mixedcultureco.com" target="_blank" rel="noopener noreferrer" class="btn-outline font-semibold py-2 px-4 rounded-full transition text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:ring-[#5bd6a2]">Shop MXD Clothing</a>
+                <a href="#contact" class="btn-white font-semibold py-2 px-4 rounded-full transition text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:ring-white">Join the Movement</a>
             </div>
         </div>
     </section>
 
     <!-- Programs Section -->
     <section id="programs" class="py-12 bg-[#0a0a0a]">
-        <div class="max-w-6xl mx-auto px-3 sm:px-4 lg:px-6">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-center text-white mb-4 fade-in underline-accent">Our Programs</h2>
-            <p class="text-base text-silver text-center mb-6 fade-in">Led by industry experts, our programs empower you with real skills, mentorship, and community to build a life of freedom through high-ticket sales and innovative tools.</p>
+            <p class="text-base text-[#b3b3b3] text-center mb-6 fade-in">Led by industry experts, our programs empower you with real skills, mentorship, and community to build a life of freedom through high-ticket sales and innovative tools.</p>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <!-- Aligned Closers Academy -->
-                <div class="bg-[#1e1e1e] p-4 rounded-lg border border-[rgba(255,255,255,0.1)] fade-in">
+                <div class="card p-4 rounded-lg fade-in">
                     <h3 class="text-xl font-semibold text-white mb-2">Aligned Closers Academy</h3>
-                    <p class="text-silver mb-2 text-sm">Master high-ticket sales to unlock remote income freedom. Learn to close $3k–$20k deals, master sales psychology, and earn $5k–$10k+/mo with weekly elite coaching.</p>
+                    <p class="text-[#b3b3b3] mb-2 text-sm">Master high-ticket sales to unlock remote income freedom. Learn to close $3k–$20k deals, master sales psychology, and earn $5k–$10k+/mo with weekly elite coaching.</p>
                     <div class="video-container mb-2">
-                        <iframe src="https://www.youtube.com/embed/G_xrEi_Z-nU" frameborder="0" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/G_xrEi_Z-nU" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Aligned Closers Academy Introduction"></iframe>
                     </div>
-                    <p class="text-silver mb-2 italic text-sm">"The Aligned Closers Academy transformed my mindset. It taught me to believe in myself, shift my perspective, and now I approach every challenge with confidence." – Brianna L.</p>
-                    <a href="https://alignedclosers.com" target="_blank" class="inline-block bg-[#5bd6a2] text-black font-semibold py-1 px-2 rounded-full hover:bg-[#4ac590] transition text-xs">Access Free Training</a>
+                    <p class="text-[#b3b3b3] mb-2 italic text-sm">"The Aligned Closers Academy transformed my mindset. It taught me to believe in myself, shift my perspective, and now I approach every challenge with confidence." – Brianna L.</p>
+                    <a href="https://alignedclosers.com" target="_blank" rel="noopener noreferrer" class="btn-primary font-semibold py-1 px-2 rounded-full transition text-xs w-full text-center block">Access Free Training</a>
                 </div>
                 <!-- YEP Program -->
-                <div class="bg-[#1e1e1e] p-4 rounded-lg border border-[rgba(255,255,255,0.1)] fade-in">
+                <div class="card p-4 rounded-lg fade-in">
                     <span class="inline-block bg-[rgba(91,214,162,0.2)] text-[#5bd6a2] text-xs px-2 py-1 rounded-full mb-1">COMING SOON</span>
                     <h3 class="text-xl font-semibold text-white mb-1">YEP Program</h3>
-                    <p class="text-sm text-silver mb-1">(Young Entrepreneur Program)</p>
-                    <p class="text-silver mb-2 text-sm">A blueprint for online business success with a business launch framework, credit & funding strategies, high-ticket offers, and daily accountability for under-25 entrepreneurs.</p>
-                    <p class="text-silver mb-2 italic text-sm">"YEP changed my mindset and scaled my credit, giving me the confidence to build my financial future at 19." – Anthony Derr</p>
+                    <p class="text-sm text-[#b3b3b3] mb-1">(Young Entrepreneur Program)</p>
+                    <p class="text-[#b3b3b3] mb-2 text-sm">A blueprint for online business success with a business launch framework, credit & funding strategies, high-ticket offers, and daily accountability for under-25 entrepreneurs.</p>
+                    <p class="text-[#b3b3b3] mb-2 italic text-sm">"YEP changed my mindset and scaled my credit, giving me the confidence to build my financial future at 19." – Anthony Derr</p>
                     <div class="video-container mb-2">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/GUnofJIQCVI?si=bHcubAbyr0gqJhm1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/GUnofJIQCVI" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="YEP Program Preview"></iframe>
                     </div>
-                    <a href="https://api.leadconnectorhq.com/widget/form/d7LMNSTWYZNSUgqHSaZm" target="_blank" class="inline-block bg-transparent border-2 border-[#5bd6a2] text-[#5bd6a2] font-semibold py-1 px-2 rounded-full hover:bg-[#5bd6a2] hover:text-black transition text-xs">Join Waitlist</a>
+                    <a href="https://api.leadconnectorhq.com/widget/form/d7LMNSTWYZNSUgqHSaZm" target="_blank" rel="noopener noreferrer" class="btn-outline font-semibold py-1 px-2 rounded-full transition text-xs w-full text-center block">Join Waitlist</a>
                 </div>
                 <!-- PlugBot -->
-                <div class="bg-[#1e1e1e] p-4 rounded-lg border border-[rgba(255,255,255,0.1)] fade-in">
+                <div class="card p-4 rounded-lg fade-in">
                     <span class="inline-block bg-[rgba(91,214,162,0.2)] text-[#5bd6a2] text-xs px-2 py-1 rounded-full mb-1">COMING SOON</span>
                     <h3 class="text-xl font-semibold text-white mb-2">PlugBot</h3>
-                    <p class="text-silver mb-2 text-sm">24/7 AI-powered automation designed to qualify and route your leads. PlugBot specializes in setting only hot, ready-to-close leads, fully replacing appointment setters with advanced sales logic.</p>
-                    <a href="https://plugbot.mxdenterprises.com/" target="_blank" class="inline-block bg-transparent border-2 border-[#5bd6a2] text-[#5bd6a2] font-semibold py-1 px-2 rounded-full hover:bg-[#5bd6a2] hover:text-black transition text-xs">Learn More</a>
+                    <p class="text-[#b3b3b3] mb-2 text-sm">24/7 AI-powered automation designed to qualify and route your leads. PlugBot specializes in setting only hot, ready-to-close leads, fully replacing appointment setters with advanced sales logic.</p>
+                    <a href="https://plugbot.mxdenterprises.com/" target="_blank" rel="noopener noreferrer" class="btn-outline font-semibold py-1 px-2 rounded-full transition text-xs w-full text-center block">Learn More</a>
                 </div>
                 <!-- MXD Consulting -->
-                <div class="bg-[#1e1e1e] p-4 rounded-lg border border-[rgba(255,255,255,0.1)] fade-in">
+                <div class="card p-4 rounded-lg fade-in">
                     <h3 class="text-xl font-semibold text-white mb-2">MXD Consulting</h3>
-                    <p class="text-silver mb-2 text-sm">Personalized strategies and systems for individuals and businesses to create digital income pathways with discipline, alignment, and purpose.</p>
-                    <a href="https://learn.mxdenterprises.com/book" target="_blank" class="inline-block bg-[#5bd6a2] text-black font-semibold py-1 px-2 rounded-full hover:bg-[#4ac590] transition text-xs">Book a Consultation</a>
+                    <p class="text-[#b3b3b3] mb-2 text-sm">Personalized strategies and systems for individuals and businesses to create digital income pathways with discipline, alignment, and purpose.</p>
+                    <a href="https://learn.mxdenterprises.com/book" target="_blank" rel="noopener noreferrer" class="btn-primary font-semibold py-1 px-2 rounded-full transition text-xs w-full text-center block">Book a Consultation</a>
                 </div>
             </div>
-            <p class="text-center text-silver mt-4 fade-in text-sm">*This program and website are for educational and informational purposes only. MXD Enterprises does not guarantee income, career results, or success of any kind. Your success depends entirely on your own effort, consistency, work ethic, application of knowledge, and market conditions.</p>
+            <p class="text-center text-[#b3b3b3] mt-4 fade-in text-sm">*This program and website are for educational and informational purposes only. MXD Enterprises does not guarantee income, career results, or success of any kind. Your success depends entirely on your own effort, consistency, work ethic, application of knowledge, and market conditions.</p>
         </div>
     </section>
 
     <!-- Testimonials Section -->
     <section id="testimonials" class="py-12 bg-[#0a0a0a]">
-        <div class="max-w-6xl mx-auto px-3 sm:px-4 lg:px-6">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-center text-white mb-4 fade-in underline-accent">Success Stories</h2>
             <div class="grid md:grid-cols-2 gap-4">
-                <div class="bg-[#1e1e1e] p-4 rounded-lg border border-[rgba(255,255,255,0.1)] fade-in">
-                    <p class="text-silver italic mb-2 text-sm">"The Aligned Closers Academy transformed my mindset. It taught me to believe in myself, shift my perspective, and now I approach every challenge with confidence."</p>
+                <div class="card p-4 rounded-lg fade-in">
+                    <p class="text-[#b3b3b3] italic mb-2 text-sm">"The Aligned Closers Academy transformed my mindset. It taught me to believe in myself, shift my perspective, and now I approach every challenge with confidence."</p>
                     <p class="text-white font-semibold text-sm">– Brianna L.</p>
                 </div>
-                <div class="bg-[#1e1e1e] p-4 rounded-lg border border-[rgba(255,255,255,0.1)] fade-in">
-                    <p class="text-silver italic mb-2 text-sm">"YEP changed my mindset and scaled my credit, giving me the confidence to build my financial future at 19."</p>
+                <div class="card p-4 rounded-lg fade-in">
+                    <p class="text-[#b3b3b3] italic mb-2 text-sm">"YEP changed my mindset and scaled my credit, giving me the confidence to build my financial future at 19."</p>
                     <p class="text-white font-semibold text-sm">– Anthony Derr</p>
                 </div>
             </div>
-            <p class="text-center text-silver mt-4 fade-in text-sm">*Results may vary. Success depends on individual effort and market conditions.</p>
+            <p class="text-center text-[#b3b3b3] mt-4 fade-in text-sm">*Results may vary. Success depends on individual effort and market conditions.</p>
         </div>
     </section>
 
     <!-- Clothing Section -->
     <section id="clothing" class="py-12 bg-[#0a0a0a]">
-        <div class="max-w-6xl mx-auto px-3 sm:px-4 lg:px-6">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-center text-white mb-4 fade-in underline-accent">Wear the Movement</h2>
-            <p class="text-base text-silver text-center mb-4 fade-in">A portion of proceeds from every piece of MXD clothing supports local communities and nonprofit initiatives worldwide. Join the movement by wearing our premium, purpose-driven apparel.</p>
+            <p class="text-base text-[#b3b3b3] text-center mb-4 fade-in">A portion of proceeds from every piece of MXD clothing supports local communities and nonprofit initiatives worldwide. Join the movement by wearing our premium, purpose-driven apparel.</p>
             <div class="text-center mt-4 fade-in">
-                <a href="https://mixedcultureco.com" target="_blank" class="inline-block bg-[#5bd6a2] text-black font-semibold py-2 px-4 rounded-full hover:bg-[#4ac590] transition text-sm">Shop the Collection</a>
+                <a href="https://mixedcultureco.com" target="_blank" rel="noopener noreferrer" class="btn-primary font-semibold py-2 px-4 rounded-full transition text-sm inline-block">Shop the Collection</a>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="py-12 bg-[#000000]">
-        <div class="max-w-6xl mx-auto px-3 sm:px-4 lg:px-6">
-            <h2 class="text-3xl font-bold text-center text-white mb-4 fade-in underline-accent">Get in Touch</h2>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-white mb-4 fade-in underline-accent">Get in Touch</h2>
             <div class="max-w-md mx-auto fade-in">
-                <div class="bg-[#1e1e1e] p-4 rounded-lg border border-[rgba(255,255,255,0.1)]">
-                    <p class="text-silver mb-4 text-sm">Ready to join the movement? Fill out the form below or connect with us.</p>
-                    <div class="space-y-2">
-                        <input type="text" placeholder="Full Name" class="w-full p-2 bg-[#1a1a1a] border border-silver rounded-lg text-white focus:outline-none focus:border-[#5bd6a2] text-sm">
-                        <input type="email" placeholder="Email Address" class="w-full p-2 bg-[#1a1a1a] border border-silver rounded-lg text-white focus:outline-none focus:border-[#5bd6a2] text-sm">
-                        <textarea placeholder="Your Message" rows="3" class="w-full p-2 bg-[#1a1a1a] border border-silver rounded-lg text-white focus:outline-none focus:border-[#5bd6a2] text-sm"></textarea>
-                        <button class="w-full bg-[#5bd6a2] text-black font-semibold py-2 px-4 rounded-full hover:bg-[#4ac590] transition text-sm">Send Message</button>
-                    </div>
-                    <div class="text-center mt-4">
-                        <a href="https://learn.mxdenterprises.com/book" target="_blank" class="inline-block bg-transparent border-2 border-[#5bd6a2] text-[#5bd6a2] font-semibold py-1 px-2 rounded-full hover:bg-[#5bd6a2] hover:text-black transition text-xs">Book a Strategy Call</a>
-                    </div>
-                    <div class="flex justify-center space-x-3 mt-4">
-                        <a href="mailto:mxd.executive@gmail.com" class="text-silver hover:text-[#5bd6a2] transition text-sm">Email</a>
+                <div class="card p-8 rounded-lg">
+                    <p class="text-lg text-[#b3b3b3] mb-6">Ready to join the movement?</p>
+                    <a href="mailto:mxd.executive@gmail.com" class="email-link text-xl hover:text-[#4ac590] transition">mxd.executive@gmail.com</a>
+                    <div class="mt-8">
+                        <a href="https://learn.mxdenterprises.com/book" target="_blank" rel="noopener noreferrer" class="btn-outline font-semibold py-2 px-6 rounded-full transition text-sm inline-block">Book a Strategy Call</a>
                     </div>
                 </div>
             </div>
@@ -216,30 +273,88 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-4 bg-[#000000] border-t border-[rgba(255,255,255,0.1)] text-center">
-        <div class="max-w-6xl mx-auto px-3 sm:px-4 lg:px-6">
-            <div class="flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-6 text-xs text-silver">
-                <a href="https://alignedclosers.com" class="hover:text-[#5bd6a2] transition">Aligned Closers</a>
-                <a href="https://api.leadconnectorhq.com/widget/form/d7LMNSTWYZNSUgqHSaZm" target="_blank" class="hover:text-[#5bd6a2] transition">YEP</a>
-                <a href="https://learn.mxdenterprises.com/book" target="_blank" class="hover:text-[#5bd6a2] transition">MXD Consulting</a>
+    <footer class="py-6 bg-[#000000] border-t border-[rgba(255,255,255,0.1)]">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-6 text-xs text-[#b3b3b3]">
+                <a href="https://alignedclosers.com" target="_blank" rel="noopener noreferrer" class="hover:text-[#5bd6a2] transition">Aligned Closers</a>
+                <a href="https://api.leadconnectorhq.com/widget/form/d7LMNSTWYZNSUgqHSaZm" target="_blank" rel="noopener noreferrer" class="hover:text-[#5bd6a2] transition">YEP</a>
+                <a href="https://learn.mxdenterprises.com/book" target="_blank" rel="noopener noreferrer" class="hover:text-[#5bd6a2] transition">MXD Consulting</a>
                 <a href="mailto:mxd.executive@gmail.com" class="hover:text-[#5bd6a2] transition">Email Us</a>
+                <a href="/privacy" class="hover:text-[#5bd6a2] transition">Privacy Policy</a>
+                <a href="/terms" class="hover:text-[#5bd6a2] transition">Terms of Service</a>
             </div>
-            <p class="text-silver text-xs mt-2">© 2025 MXD Enterprises. All rights reserved.</p>
-            <p class="text-silver text-xs mt-1">Disclaimer: This program and website are for educational and informational purposes only. MXD Enterprises does not guarantee income, career results, or success of any kind. Your success depends entirely on your own effort, consistency, work ethic, application of knowledge, and market conditions. Testimonials are individual results and do not reflect typical outcomes.</p>
+            <p class="text-[#b3b3b3] text-xs mt-4 text-center">© 2025 MXD Enterprises. All rights reserved.</p>
+            <p class="text-[#b3b3b3] text-xs mt-2 text-center">Disclaimer: This program and website are for educational and informational purposes only. MXD Enterprises does not guarantee income, career results, or success of any kind. Your success depends entirely on your own effort, consistency, work ethic, application of knowledge, and market conditions. Testimonials are individual results and do not reflect typical outcomes.</p>
         </div>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            gsap.to('.fade-in', {
-                scrollTrigger: {
-                    trigger: '.fade-in',
-                    start: 'top 80%',
-                },
-                opacity: 1,
-                y: 0,
-                duration: 0.5,
-                stagger: 0.1,
+            // Dynamic Navigation Highlighting
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            function highlightNav() {
+                let current = '';
+                
+                // Check if we're at the top of the page
+                if (window.scrollY < 100) {
+                    current = 'home';
+                } else {
+                    sections.forEach(section => {
+                        const sectionTop = section.offsetTop;
+                        const sectionHeight = section.clientHeight;
+                        
+                        if (window.scrollY >= (sectionTop - 100)) {
+                            current = section.getAttribute('id');
+                        }
+                    });
+                }
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active-nav');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active-nav');
+                    }
+                });
+            }
+            
+            window.addEventListener('scroll', highlightNav);
+            highlightNav(); // Run once on load
+            
+            // Lazy load GSAP animation
+            if (window.IntersectionObserver) {
+                const fadeElements = document.querySelectorAll('.fade-in');
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                        }
+                    });
+                }, { threshold: 0.1 });
+
+                fadeElements.forEach(element => {
+                    observer.observe(element);
+                });
+            } else {
+                // Fallback for browsers without IntersectionObserver
+                gsap.to('.fade-in', {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.5,
+                    stagger: 0.1,
+                });
+            }
+
+            // Add focus styles for keyboard navigation
+            document.addEventListener('keyup', (e) => {
+                if (e.key === 'Tab') {
+                    document.documentElement.classList.add('user-is-tabbing');
+                }
+            });
+
+            document.addEventListener('mousedown', () => {
+                document.documentElement.classList.remove('user-is-tabbing');
             });
         });
     </script>
