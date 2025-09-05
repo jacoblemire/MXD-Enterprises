@@ -3,8 +3,21 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MXD Consulting — Plug‑and‑Play AI Systems</title>
-  <meta name="description" content="MXD Consulting builds plug‑and‑play AI systems for coaching programs — fast, simple, and beautifully branded. PlugBot Lite template library + white‑label builds." />
+  <title>MXD Consulting — Plug‑and‑Play Chat Systems</title>
+  <meta name="description" content="MXD Consulting builds plug‑and‑play chat systems for coaching programs — fast, simple, and beautifully branded. PlugBot Lite template library + white‑label builds." />
+  <link rel="canonical" href="https://mxdenterprises.com/consulting" />
+  <meta name="theme-color" content="#0a0a0b" />
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="MXD Consulting — Plug‑and‑Play Chat Systems" />
+  <meta property="og:description" content="Lightweight, beautiful chat experiences your students and setters actually use. Templates + white‑label builds." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://mxdenterprises.com/og/mxd-consulting.png" />
+  <meta property="og:url" content="https://mxdenterprises.com/consulting" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{
       --bg:#0a0a0b;          /* near‑black */
@@ -15,14 +28,20 @@
       --primary:#19b27b;     /* MXD green */
       --ring:#2a2f36;        /* borders */
       --brand:linear-gradient(135deg,#19b27b, #7ce1b8 60%, #d1f4e7);
+      --focus: 0 0 0 3px rgba(209,244,231,.55);
     }
     *{box-sizing:border-box}
+    html:focus-within {scroll-behavior:smooth}
     html,body{height:100%}
     body{margin:0;background:radial-gradient(1200px 600px at 20% -10%,rgba(25,178,123,.15),transparent 60%),
                         radial-gradient(900px 500px at 120% 10%,rgba(124,225,184,.12),transparent 60%),
                         var(--bg);color:var(--text);font:16px/1.5 Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"}
     a{color:inherit;text-decoration:none}
+    a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible, textarea:focus-visible {outline:none;box-shadow:var(--focus);border-radius:10px}
     .container{max-width:1200px;margin:0 auto;padding:24px}
+    .skip {position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+    .skip:focus{left:16px;top:16px;width:auto;height:auto;padding:8px 12px;background:#0d0e10;border:1px solid var(--ring);border-radius:10px}
+
     header{position:sticky;top:0;backdrop-filter:saturate(140%) blur(10px);background:rgba(10,10,11,.55);border-bottom:1px solid var(--ring);z-index:20}
     .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
     .brand{display:flex;align-items:center;gap:10px}
@@ -90,48 +109,66 @@
       .steps,.pricing,.faq{grid-template-columns:1fr}
       .menu{display:none}
     }
+
+    /* Motion safety */
+    @media (prefers-reduced-motion: reduce){
+      * {animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important;}
+    }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "MXD Consulting",
+    "url": "https://mxdenterprises.com/consulting",
+    "logo": "https://mxdenterprises.com/og/mxd-logo.png",
+    "sameAs": [
+      "https://instagram.com/jadamercedes_",
+      "https://alignedclosers.com/"
+    ]
+  }
+  </script>
 </head>
 <body>
-  <header>
+  <a class="skip" href="#main">Skip to content</a>
+  <header role="banner" aria-label="Site header">
     <div class="container nav">
       <div class="brand">
         <div class="logo" aria-hidden="true"></div>
         <div class="name">MXD Consulting</div>
       </div>
-      <nav class="menu">
+      <nav class="menu" aria-label="Primary">
         <a href="#templates">Templates</a>
         <a href="#how">How it works</a>
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
       </nav>
-      <div class="menu">
+      <div class="menu" role="group" aria-label="Quick actions">
         <a class="cta small" href="#contact">Contact</a>
         <a class="cta primary small" href="#templates">Browse templates</a>
       </div>
     </div>
   </header>
 
-  <main class="container">
+  <main id="main" class="container">
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero" aria-labelledby="hero-title">
       <div class="hero-grid">
         <div>
-          <span class="eyebrow">Plug‑and‑Play AI Systems for Coaching Programs</span>
-          <h1>Ship a branded assistant in 24 hours —
-            <br/>no dev team, no chaos.</h1>
+          <span class="eyebrow">Plug‑and‑Play Chat Systems for Coaching Programs</span>
+          <h1 id="hero-title">Ship a branded assistant in 24 hours —<br/>no dev team, no chaos.</h1>
           <p class="lead">We build lightweight, beautiful chat experiences your students and setters actually use. Start with our PlugBot Lite templates, then add white‑label upgrades when you’re ready.</p>
           <div class="actions">
             <a class="cta primary" href="#templates">Browse Templates</a>
             <a class="cta" href="#how">How it works</a>
           </div>
           <div class="grid" style="grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px">
-            <div class="glass stat"><div class="bullet"></div><div><strong>Simple</strong><br/><span class="muted">Single‑file deploy</span></div></div>
-            <div class="glass stat"><div class="bullet"></div><div><strong>Fast</strong><br/><span class="muted">GitHub Pages ready</span></div></div>
-            <div class="glass stat"><div class="bullet"></div><div><strong>On‑brand</strong><br/><span class="muted">Your logo & colors</span></div></div>
+            <div class="glass stat" aria-label="Simple: Single‑file deploy"><div class="bullet" aria-hidden="true"></div><div><strong>Simple</strong><br/><span class="muted">Single‑file deploy</span></div></div>
+            <div class="glass stat" aria-label="Fast: GitHub Pages ready"><div class="bullet" aria-hidden="true"></div><div><strong>Fast</strong><br/><span class="muted">GitHub Pages ready</span></div></div>
+            <div class="glass stat" aria-label="On‑brand: Your logo and colors"><div class="bullet" aria-hidden="true"></div><div><strong>On‑brand</strong><br/><span class="muted">Your logo & colors</span></div></div>
           </div>
         </div>
-        <div class="panel">
+        <div class="panel" aria-hidden="true">
           <div class="mock">
             <div class="bubble">CoachBot • How can I help you practice today?</div>
             <div class="bubble me">Run the <em>DM objection: “No time”</em> and grade me A–F.</div>
@@ -144,67 +181,67 @@
     </section>
 
     <!-- TEMPLATES -->
-    <section id="templates" class="section">
-      <h2>Template Library</h2>
+    <section id="templates" class="section" aria-labelledby="templates-title">
+      <h2 id="templates-title">Template Library</h2>
       <p class="muted">Start with a template, ship today. Each comes as a single <code>index.html</code> + easy instructions.</p>
       <div class="grid cards">
-        <article class="card">
+        <article class="card" aria-labelledby="tpl-setter-title">
           <span class="tag">Setter Practice Bot</span>
-          <h3>DM Script Roleplay + Scoring</h3>
+          <h3 id="tpl-setter-title">DM Script Roleplay + Scoring</h3>
           <p class="muted">Roleplay objections, track responses, and display instant feedback. Includes 10 preset objections you can edit.</p>
           <div class="actions">
-            <a class="cta" href="#demo-setter">View demo</a>
-            <a class="cta primary" href="#buy-setter">Get template</a>
+            <a class="cta" href="#demo-setter" aria-label="View setter practice bot demo">View demo</a>
+            <a class="cta primary" href="#buy-setter" aria-label="Buy setter practice bot template">Get template</a>
           </div>
         </article>
-        <article class="card">
+        <article class="card" aria-labelledby="tpl-arch-title">
           <span class="tag">Buyer Archetype Bot</span>
-          <h3>Identify & Coach by Persona</h3>
+          <h3 id="tpl-arch-title">Identify & Coach by Persona</h3>
           <p class="muted">Guides students to recognize Skeptic/Dreamer/Analyst/Driver patterns and reply with the right angles.</p>
           <div class="actions">
-            <a class="cta" href="#demo-archetype">View demo</a>
-            <a class="cta primary" href="#buy-archetype">Get template</a>
+            <a class="cta" href="#demo-archetype" aria-label="View buyer archetype bot demo">View demo</a>
+            <a class="cta primary" href="#buy-archetype" aria-label="Buy buyer archetype bot template">Get template</a>
           </div>
         </article>
-        <article class="card">
+        <article class="card" aria-labelledby="tpl-faq-title">
           <span class="tag">FAQ Tutor Bot</span>
-          <h3>24/7 Student Helpdesk</h3>
+          <h3 id="tpl-faq-title">24/7 Student Helpdesk</h3>
           <p class="muted">Answer program FAQs, link docs, and capture questions you want routed to your team’s inbox.</p>
           <div class="actions">
-            <a class="cta" href="#demo-faq">View demo</a>
-            <a class="cta primary" href="#buy-faq">Get template</a>
+            <a class="cta" href="#demo-faq" aria-label="View FAQ tutor bot demo">View demo</a>
+            <a class="cta primary" href="#buy-faq" aria-label="Buy FAQ tutor bot template">Get template</a>
           </div>
         </article>
-        <article class="card">
+        <article class="card" aria-labelledby="tpl-qual-title">
           <span class="tag">Lead Qualifier Bot</span>
-          <h3>Pre‑Call Intake + Routing</h3>
+          <h3 id="tpl-qual-title">Pre‑Call Intake + Routing</h3>
           <p class="muted">Collect 3–5 key answers, score fitness, and route to Calendly/checkout or a DM setter — your choice.</p>
           <div class="actions">
-            <a class="cta" href="#demo-qualifier">View demo</a>
-            <a class="cta primary" href="#buy-qualifier">Get template</a>
+            <a class="cta" href="#demo-qualifier" aria-label="View lead qualifier bot demo">View demo</a>
+            <a class="cta primary" href="#buy-qualifier" aria-label="Buy lead qualifier bot template">Get template</a>
           </div>
         </article>
       </div>
     </section>
 
     <!-- HOW IT WORKS -->
-    <section id="how" class="section">
-      <h2>How it works</h2>
+    <section id="how" class="section" aria-labelledby="how-title">
+      <h2 id="how-title">How it works</h2>
       <p class="muted">No engineering team needed. Own your files. Deploy anywhere.</p>
       <div class="grid steps">
-        <div class="step"><div class="n">1</div><strong>Pick a template</strong><br/><span class="muted">Choose the assistant that fits your use case. All include docs + examples.</span></div>
-        <div class="step"><div class="n">2</div><strong>Brand & tweak</strong><br/><span class="muted">Drop in your logo, colors, and edit the conversation list. 10–15 minutes.</span></div>
-        <div class="step"><div class="n">3</div><strong>Deploy</strong><br/><span class="muted">Upload to GitHub Pages or your site. Optional: we host + set up a subdomain.</span></div>
+        <div class="step"><div class="n" aria-hidden="true">1</div><strong>Pick a template</strong><br/><span class="muted">Choose the assistant that fits your use case. All include docs + examples.</span></div>
+        <div class="step"><div class="n" aria-hidden="true">2</div><strong>Brand & tweak</strong><br/><span class="muted">Drop in your logo, colors, and edit the conversation list. 10–15 minutes.</span></div>
+        <div class="step"><div class="n" aria-hidden="true">3</div><strong>Deploy</strong><br/><span class="muted">Upload to GitHub Pages or your site. Optional: we host + set up a subdomain.</span></div>
       </div>
     </section>
 
     <!-- PRICING -->
-    <section id="pricing" class="section">
-      <h2>Pricing</h2>
+    <section id="pricing" class="section" aria-labelledby="pricing-title">
+      <h2 id="pricing-title">Pricing</h2>
       <div class="grid pricing">
-        <div class="price">
+        <div class="price" aria-labelledby="tier-diy">
           <div class="tag">DIY</div>
-          <div class="amt">$97</div>
+          <div id="tier-diy" class="amt" aria-label="DIY price">$97</div>
           <p>Template download + instructions</p>
           <ul>
             <li>Single‑file <code>index.html</code></li>
@@ -213,9 +250,9 @@
           </ul>
           <div class="actions"><a class="cta primary" href="#buy-any">Buy template</a></div>
         </div>
-        <div class="price" style="outline:1px solid rgba(209,244,231,.25)">
+        <div class="price" style="outline:1px solid rgba(209,244,231,.25)" aria-labelledby="tier-white">
           <div class="tag">White‑Label</div>
-          <div class="amt">$497</div>
+          <div id="tier-white" class="amt">$497</div>
           <p>We brand + configure for your program</p>
           <ul>
             <li>Logo/colors set for you</li>
@@ -224,9 +261,9 @@
           </ul>
           <div class="actions"><a class="cta primary" href="#contact">Book a build</a></div>
         </div>
-        <div class="price">
+        <div class="price" aria-labelledby="tier-suite">
           <div class="tag">Done‑for‑You Suite</div>
-          <div class="amt">$1,500+</div>
+          <div id="tier-suite" class="amt">$1,500+</div>
           <p>Multi‑bot setup for teams</p>
           <ul>
             <li>Setter + Archetype + FAQ + Qualifier</li>
@@ -239,12 +276,12 @@
     </section>
 
     <!-- FAQ -->
-    <section id="faq" class="section">
-      <h2>FAQ</h2>
+    <section id="faq" class="section" aria-labelledby="faq-title">
+      <h2 id="faq-title">FAQ</h2>
       <div class="grid faq">
         <details>
-          <summary>Is this “real AI” or scripted?</summary>
-          <p class="muted">PlugBot Lite ships as a lightweight, scripted chat experience so you can launch instantly. We also offer optional upgrades that connect to APIs (OpenAI, Formspree, CRMs) when you want more power.</p>
+          <summary>Is this AI or scripted?</summary>
+          <p class="muted">These are scripted assistants you fully own — no backend required. Launch instantly. If you want more power later, we offer optional integrations to APIs (e.g., OpenAI, Formspree, CRMs).</p>
         </details>
         <details>
           <summary>Where do I host the bot?</summary>
@@ -262,52 +299,85 @@
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="section">
-      <h2>Talk to us</h2>
+    <section id="contact" class="section" aria-labelledby="contact-title">
+      <h2 id="contact-title">Talk to us</h2>
       <p class="muted">Tell us about your program and what you want the assistant to do. We’ll reply same day.</p>
-      <form class="grid" style="grid-template-columns:1fr 1fr;gap:12px" onsubmit="return handleSubmit(event)">
-        <input required name="name" placeholder="Your name" style="padding:12px 14px;border-radius:12px;border:1px solid var(--ring);background:#0c0e10;color:var(--text)" />
-        <input required name="email" placeholder="Email" type="email" style="padding:12px 14px;border-radius:12px;border:1px solid var(--ring);background:#0c0e10;color:var(--text)" />
-        <input name="company" placeholder="Company / Program" style="padding:12px 14px;border-radius:12px;border:1px solid var(--ring);background:#0c0e10;color:var(--text)" />
-        <input name="website" placeholder="Website (optional)" style="padding:12px 14px;border-radius:12px;border:1px solid var(--ring);background:#0c0e10;color:var(--text)" />
-        <textarea required name="message" placeholder="What do you want the bot(s) to do?" rows="4" style="grid-column:1/-1;padding:12px 14px;border-radius:12px;border:1px solid var(--ring);background:#0c0e10;color:var(--text)"></textarea>
+      <form class="grid" style="grid-template-columns:1fr 1fr;gap:12px" onsubmit="return handleSubmit(event)" aria-describedby="status">
+        <label>
+          <span class="visually-hidden">Your name</span>
+          <input required name="name" placeholder="Your name" autocomplete="name" style="padding:12px 14px;border-radius:12px;border:1px solid var(--ring);background:#0c0e10;color:var(--text)" />
+        </label>
+        <label>
+          <span class="visually-hidden">Email</span>
+          <input required name="email" placeholder="Email" type="email" autocomplete="email" style="padding:12px 14px;border-radius:12px;border:1px solid var(--ring);background:#0c0e10;color:var(--text)" />
+        </label>
+        <label>
+          <span class="visually-hidden">Company / Program</span>
+          <input name="company" placeholder="Company / Program" autocomplete="organization" style="padding:12px 14px;border-radius:12px;border:1px solid var(--ring);background:#0c0e10;color:var(--text)" />
+        </label>
+        <label>
+          <span class="visually-hidden">Website</span>
+          <input name="website" placeholder="Website (optional)" inputmode="url" style="padding:12px 14px;border-radius:12px;border:1px solid var(--ring);background:#0c0e10;color:var(--text)" />
+        </label>
+        <label style="grid-column:1/-1">
+          <span class="visually-hidden">Message</span>
+          <textarea required name="message" placeholder="What do you want the bot(s) to do?" rows="4" style="padding:12px 14px;border-radius:12px;border:1px solid var(--ring);background:#0c0e10;color:var(--text)"></textarea>
+        </label>
         <div style="display:flex;gap:10px;align-items:center">
           <button class="cta primary" type="submit">Send</button>
-          <span id="status" class="muted"></span>
+          <span id="status" class="muted" role="status" aria-live="polite"></span>
         </div>
       </form>
     </section>
   </main>
 
-  <footer>
+  <footer role="contentinfo">
     <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
       <div>© <span id="y"></span> MXD Consulting • Powered by MXD Enterprises</div>
       <div style="display:flex;gap:12px">
-        <a class="cta small" href="#">Terms</a>
-        <a class="cta small" href="#">Privacy</a>
+        <a class="cta small" href="#" rel="nofollow">Terms</a>
+        <a class="cta small" href="#" rel="nofollow">Privacy</a>
       </div>
     </div>
   </footer>
 
   <script>
+    // helper for screen readers
+    (function(){
+      const s = document.createElement('style');
+      s.innerHTML = '.visually-hidden{position:absolute!important;clip:rect(1px,1px,1px,1px)!important;padding:0!important;border:0!important;height:1px!important;width:1px!important;overflow:hidden!important;white-space:nowrap!important}';
+      document.head.appendChild(s);
+    })();
+
     document.getElementById('y').textContent = new Date().getFullYear();
+
     async function handleSubmit(e){
       e.preventDefault();
+      const form = e.target;
       const status = document.getElementById('status');
       status.textContent = 'Sending…';
+
       // Replace with your Formspree or backend endpoint
       const ENDPOINT = 'https://formspree.io/f/your-id-here';
-      const data = Object.fromEntries(new FormData(e.target).entries());
+      const data = Object.fromEntries(new FormData(form).entries());
+
       try{
-        const res = await fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+        const res = await fetch(ENDPOINT,{
+          method:'POST',
+          headers:{'Content-Type':'application/json','Accept':'application/json'},
+          body:JSON.stringify(data)
+        });
         if(res.ok){
           status.textContent = 'Thanks — we’ll reply shortly.';
-          e.target.reset();
+          form.reset();
         }else{
+          const msg = await res.text();
           status.textContent = 'Something went wrong. Email contact@mxdenterprises.com';
+          console.warn('Form error', msg);
         }
       }catch(err){
         status.textContent = 'Network error. Email contact@mxdenterprises.com';
+        console.error(err);
       }
       return false;
     }
