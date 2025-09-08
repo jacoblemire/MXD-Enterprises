@@ -3,38 +3,72 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MXD Consulting — Jacob Lemire</title>
-  <meta name="description" content="Exclusive consulting led by Jacob Lemire. Precision-crafted chat systems and streamlined funnels for elite coaching programs.">
-  <meta property="og:title" content="MXD Consulting — Jacob Lemire">
-  <meta property="og:description" content="Exclusive consulting led by Jacob Lemire. Precision-crafted chat systems and streamlined funnels for elite coaching programs.">
+  <title>MXD Enterprises — Systems for Coaching Success</title>
+  <meta name="description" content="MXD Enterprises builds systems to scale coaching programs. Our PlugBots are interactive chat tools that boost booked calls, show rates, and client success.">
+  <meta property="og:title" content="MXD Enterprises — Systems for Coaching Success">
+  <meta property="og:description" content="MXD Enterprises builds systems to scale coaching programs. Our PlugBots are interactive chat tools that boost booked calls, show rates, and client success.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://mxdenterprises.com/consulting">
+  <meta property="og:url" content="https://mxdenterprises.com">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16z' fill='%23ffffff'/></svg>">
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Inter:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Inter:wght@400&display=swap" rel="stylesheet">
   <style>
     :root {
       --black: #0a0a0a;
       --white: #ffffff;
       --gray: #8a8a8a;
+      --silver: #c0c0c0;
       --surface: #121212;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body { height: 100%; scroll-behavior: smooth; }
-    body { background: var(--black); color: var(--white); font-family: 'EB Garamond', serif; font-size: 18px; line-height: 1.6; }
+    body { background: var(--black); color: var(--white); font-family: 'Inter', sans-serif; font-size: 18px; line-height: 1.6; }
     .wrap { max-width: 640px; margin: 0 auto; padding: 24px; }
-    header { padding: 48px 0; text-align: center; opacity: 0; animation: fadeIn 1s ease-out forwards; }
-    h1 { font-size: 36px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 12px; }
-    p { font-family: 'Inter', sans-serif; color: var(--gray); margin-bottom: 16px; }
-    .contact { font-size: 24px; font-weight: 700; text-align: center; margin: 24px 0; opacity: 0; animation: slideUp 1s ease-out 0.5s forwards; }
-    .contact a { color: var(--white); text-decoration: none; transition: color 0.3s ease; }
-    .contact a:hover { color: var(--gray); }
+    header { padding: 32px 0; text-align: center; }
+    h1 { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 36px; 
+      font-weight: 900; 
+      letter-spacing: -0.02em; 
+      margin-bottom: 8px; 
+      color: var(--white);
+      opacity: 0;
+      animation: fadeIn 0.8s ease-out forwards;
+    }
+    p { 
+      font-family: 'Inter', sans-serif; 
+      color: var(--gray); 
+      margin-bottom: 16px; 
+      opacity: 0; 
+      animation: slideUp 0.6s ease-out 0.4s forwards; 
+    }
+    .cta { margin-top: 16px; text-align: center; }
+    .cta a { 
+      display: inline-block; 
+      font-size: 16px; 
+      font-weight: 700; 
+      font-family: 'Inter', sans-serif; 
+      color: var(--white); 
+      text-decoration: none; 
+      padding: 8px 16px; 
+      transition: color 0.3s ease; 
+      margin: 0 8px; 
+    }
+    .cta a:hover { color: var(--silver); }
+    .cta a.secondary { color: var(--gray); }
+    .cta a.secondary:hover { color: var(--silver); }
     section { padding: 32px 0; border-top: 1px solid #2a2a2a; opacity: 0; animation: fadeIn 1s ease-out forwards; animation-delay: 0.2s; }
-    h2 { font-size: 26px; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 16px; }
+    h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 900; letter-spacing: -0.01em; margin-bottom: 16px; }
     .list { display: grid; gap: 16px; }
     .li { display: flex; gap: 12px; align-items: flex-start; font-family: 'Inter', sans-serif; }
     .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--white); margin-top: 8px; }
     .muted { color: var(--gray); font-family: 'Inter', sans-serif; }
+    form { display: grid; gap: 16px; max-width: 400px; margin: 24px auto; }
+    input, button { padding: 12px; font-family: 'Inter', sans-serif; font-size: 16px; border: 1px solid var(--gray); border-radius: 4px; background: transparent; color: var(--white); }
+    button { background: var(--white); color: var(--black); font-weight: 700; cursor: pointer; transition: background 0.3s ease; }
+    button:hover { background: var(--silver); }
     footer { padding: 24px 0; border-top: 1px solid #2a2a2a; text-align: center; color: var(--gray); font-size: 14px; font-family: 'Inter', sans-serif; opacity: 0; animation: fadeIn 1s ease-out forwards; animation-delay: 0.3s; }
+    footer a { color: var(--white); text-decoration: none; transition: color 0.3s ease; }
+    footer a:hover { color: var(--silver); }
     .sr-only { position: absolute; clip: rect(1px, 1px, 1px, 1px); height: 1px; width: 1px; overflow: hidden; white-space: nowrap; }
     
     @keyframes fadeIn {
@@ -42,56 +76,73 @@
       to { opacity: 1; transform: translateY(0); }
     }
     @keyframes slideUp {
-      from { opacity: 0; transform: translateY(20px); }
+      from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
     }
     
     @media (min-width: 640px) {
-      h1 { font-size: 42px; }
-      h2 { font-size: 30px; }
+      h1 { font-size: 44px; }
+      h2 { font-size: 28px; }
       .wrap { padding: 32px; }
-      .contact { font-size: 28px; }
+      .cta a { font-size: 18px; }
     }
   </style>
 </head>
 <body>
   <header class="wrap" aria-labelledby="t">
-    <h1 id="t">MXD Consulting</h1>
-    <p class="muted">Led by Jacob Lemire, we deliver precision-crafted systems and streamlined funnels for elite coaching programs.</p>
+    <h1 id="t">MXD Solutions</h1>
+    <p class="muted">MXD Enterprises builds coaching systems that scale. Our PlugBots are interactive tools that make training, lead-qualifying, and onboarding frictionless.</p>
+    <div class="cta">
+      <a href="/plugbots">Explore PlugBots</a>
+      <a href="#contact" class="secondary">Book a Strategy Call</a>
+    </div>
   </header>
 
   <main class="wrap">
-    <section aria-labelledby="offer">
-      <h2 id="offer">Our Expertise</h2>
+    <section aria-labelledby="solutions">
+      <h2 id="solutions">Our Solutions</h2>
       <div class="list">
-        <div class="li"><span class="dot"></span><span>Streamlined Funnels — Clarity and conversion, distilled.</span></div>
-        <div class="li"><span class="dot"></span><span>Intelligent Chat Systems — Tailored for setters and clients.</span></div>
-        <div class="li"><span class="dot"></span><span>Seamless Automations — Minimal, effective integrations.</span></div>
+        <div class="li"><span class="dot"></span><span>Streamlined templates to rapidly enhance your coaching operations.</span></div>
+        <div class="li"><span class="dot"></span><span>Custom-branded chat systems for a polished, professional presence.</span></div>
+        <div class="li"><span class="dot"></span><span>Comprehensive audits and bespoke systems for unmatched scalability.</span></div>
       </div>
     </section>
 
-    <section aria-labelledby="who">
-      <h2 id="who">Our Clients</h2>
-      <p class="muted">Elite coaching programs seeking precision and impact.</p>
+    <section aria-labelledby="plugbots">
+      <h2 id="plugbots">Meet PlugBots: Your Coaching Superpower</h2>
+      <p class="muted">Interactive chat-based tools to automate training, qualify leads, and onboard clients.</p>
       <div class="list">
-        <div class="li"><span class="dot"></span><span>Engagement Bots — Consistent, branded interactions.</span></div>
-        <div class="li"><span class="dot"></span><span>Conversion Funnels — Elegant, high-performing pages.</span></div>
-        <div class="li"><span class="dot"></span><span>Strategic Advisory — Direct expertise from Jacob.</span></div>
+        <div class="li"><span class="dot"></span><span><strong>Archetype Trainer</strong> — Scales your coaching framework with engaging, interactive chats.</span></div>
+        <div class="li"><span class="dot"></span><span><strong>Objection Bot</strong> — Handles objections in real-time to turn hesitant leads into booked calls.</span></div>
+        <div class="li"><span class="dot"></span><span><strong>Lead Qualifier</strong> — Pre-screens leads to ensure only high-fit prospects book calls.</span></div>
+      </div>
+      <div class="cta">
+        <a href="/plugbots">Explore All PlugBots</a>
       </div>
     </section>
 
-    <section aria-labelledby="process">
-      <h2 id="process">Our Approach</h2>
+    <section aria-labelledby="why">
+      <h2 id="why">Why MXD Enterprises</h2>
       <div class="list">
-        <div class="li"><span class="dot"></span><span>Discovery — Align on vision and priorities.</span></div>
-        <div class="li"><span class="dot"></span><span>Execution — Deliver refined systems swiftly.</span></div>
-        <div class="li"><span class="dot"></span><span>Optimization — Elevate performance continuously.</span></div>
+        <div class="li"><span class="dot"></span><span><strong>Proven Results</strong> — Increased show rates by up to 40% for coaching programs.</span></div>
+        <div class="li"><span class="dot"></span><span><strong>Coach-Centric</strong> — Tools and systems built specifically for coaching funnels.</span></div>
+        <div class="li"><span class="dot"></span><span><strong>Flexible Solutions</strong> — From streamlined templates to fully bespoke systems.</span></div>
       </div>
+    </section>
+
+    <section aria-labelledby="contact">
+      <h2 id="contact">Ready to Scale?</h2>
+      <p class="muted">Book a strategy call to discuss how our systems and PlugBots can elevate your coaching program.</p>
+      <form action="/submit" method="post">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <button type="submit">Book a Call</button>
+      </form>
     </section>
   </main>
 
   <footer class="wrap">
-    <div>© <span id="y"></span> MXD Consulting • Powered by MXD Enterprises • <a href="tel:+19132746264">Contact</a></div>
+    <div>© <span id="y"></span> MXD Enterprises • Powered by MXD Enterprises • <a href="#contact">Contact Us</a></div>
   </footer>
 
   <script>
